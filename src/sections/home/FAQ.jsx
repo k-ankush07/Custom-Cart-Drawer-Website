@@ -22,10 +22,7 @@ const faqs = [
     q: ' What types of upsells can I create?',
     a: 'Product recommendations, bundle offers, free-gift unlocks, and threshold-based promotions are all supported.',
   },
-  {
-    q: 'Can I customize the cart drawer design?',
-    a: 'HubCart works with every Shopify theme — Dawn, Online Store 2.0, and custom themes alike.',
-  },
+
 ]
 
 const plusImg = 'https://hubsyntax.com/cart-images/CartPluss.png'
@@ -49,7 +46,7 @@ export default function FAQ() {
               const isOpen = openIndex === i
               return (
                 <div
-                  key={faq.q}
+                  key={i}
                   className="rounded-xl border border-gray-200 bg-white "
                 >
                   <button

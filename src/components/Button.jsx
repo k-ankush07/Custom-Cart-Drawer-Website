@@ -27,7 +27,7 @@ export default function Button({
   return (
     <button
       type={type}
-      className={`group rounded-full font-bold transition-colors cursor-pointer text-[18px] leading-[20px] inline-flex items-center gap-[15px] ${variantClass} ${sizeClass} ${className}`}
+      className={`group rounded-full font-bold transition-colors cursor-pointer text-[18px] max-[540px]:text-[16px] leading-[20px] inline-flex items-center gap-[15px] ${variantClass} ${sizeClass} ${className}`}
       {...props}
     >
       {children}
