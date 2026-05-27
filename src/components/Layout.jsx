@@ -8,7 +8,7 @@ export default function Layout() {
     <div className="flex min-h-screen flex-col bg-[#1D1E20] text-[#FFFFFF]">
       <Header />
       <div className='absolute top-0'>
-        <img src="https://hubsyntax.com/cart-images/Mask group (8).svg" alt="" />
+        <img src="https://hubsyntax.com/cart-images/Mask group (8).svg" alt="" decoding="async" />
       </div>
       <main className="flex-1">
         <Outlet />

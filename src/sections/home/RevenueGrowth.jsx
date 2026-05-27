@@ -37,7 +37,7 @@ export default function RevenueGrowth() {
                     {stats.map((stat) => (
                         <div key={stat.id} className='flex flex-col items-center'>
                             <div className='h-[100px] w-[100px] rounded-[50%] bg-white p-[20px] flex items-center justify-center'>
-                                <img src={stat.image} alt='HubCart' />
+                                <img src={stat.image} alt='HubCart' loading='lazy' decoding='async' />
                             </div>
                             <p className='max-[540px]:text-[40px] text-[55px] max-[540px]:leading-[45px] leading-[55px] font-[500] my-[15px]'>{stat.value}</p>
                             <p className='text-[16px] leading-[20px] '>{stat.label}</p>

@@ -8,10 +8,10 @@ export default function Footer() {
   return (
     <footer className="relative">
       <div className='absolute z-0 bottom-0 left-0'>
-        <img src="https://hubsyntax.com/cart-images/Mask group (22).svg" alt="" />
+        <img src="https://hubsyntax.com/cart-images/Mask group (22).svg" alt="" loading="lazy" decoding="async" />
       </div>
       <div className='absolute z-0 bottom-0 right-0'>
-        <img src="https://hubsyntax.com/cart-images/Mask group (23).svg" alt="" />
+        <img src="https://hubsyntax.com/cart-images/Mask group (23).svg" alt="" loading="lazy" decoding="async" />
       </div>
       <Container className='relative'>
         <div className="flex flex-col items-center text-center">
@@ -19,6 +19,8 @@ export default function Footer() {
             <img
               src="https://hubsyntax.com/cart-images/HUBCART.svg"
               alt="HubCart"
+              loading="lazy"
+              decoding="async"
               className="h-[37px] w-auto brightness-0 invert"
             />
           </Link>

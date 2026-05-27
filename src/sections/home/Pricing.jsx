@@ -133,6 +133,8 @@ export default function Pricing() {
                         <img
                           src={plan.checkIcon}
                           alt='check'
+                          loading='lazy'
+                          decoding='async'
                           className='w-[15px] h-[15px]'
                           onError={(e) => { e.target.style.display = 'none' }}
                         />
@@ -152,10 +154,10 @@ export default function Pricing() {
         </div>
       </Container>
        <div className='absolute z-0 top-100 left-0'>
-        <img src="https://hubsyntax.com/cart-images/Mask group (20).svg" alt="" />
+        <img src="https://hubsyntax.com/cart-images/Mask group (20).svg" alt="" loading="lazy" decoding="async" />
       </div>
        <div className='absolute z-0 top-50 right-0'>
-        <img src="https://hubsyntax.com/cart-images/Mask group (21).svg" alt="" />
+        <img src="https://hubsyntax.com/cart-images/Mask group (21).svg" alt="" loading="lazy" decoding="async" />
       </div>
     </section>
   )

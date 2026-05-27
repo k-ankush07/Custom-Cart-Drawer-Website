@@ -58,6 +58,8 @@ export default function FAQ() {
                     <img
                       src={isOpen ? minusImg : plusImg}
                       alt={isOpen ? 'collapse' : 'expand'}
+                      loading="lazy"
+                      decoding="async"
                       className="w-7 h-7 flex-shrink-0"
                     />
                   </button>

@@ -57,6 +57,8 @@ export default function Features() {
             <img
               src='https://hubsyntax.com/cart-images/cartFeatures.png'
               alt='HubCart features'
+              loading='lazy'
+              decoding='async'
               className='w-full h-auto'
             />
           </div>

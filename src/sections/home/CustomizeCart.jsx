@@ -32,6 +32,8 @@ export default function CustomizeCart() {
                         <img
                             src='https://hubsyntax.com/cart-images/custmiseCart.png'
                             alt='HubCart'
+                            loading='lazy'
+                            decoding='async'
                             className='w-full h-auto'
                         />
                     </div>
@@ -50,7 +52,7 @@ export default function CustomizeCart() {
                 </div>
             </Container>
             <div className='absolute right-0 top-70 z-0 hidden lg:block'>
-                <img src="https://hubsyntax.com/cart-images/Mask group (12).svg" alt="" />
+                <img src="https://hubsyntax.com/cart-images/Mask group (12).svg" alt="" loading="lazy" decoding="async" />
             </div>
         </section>
     )

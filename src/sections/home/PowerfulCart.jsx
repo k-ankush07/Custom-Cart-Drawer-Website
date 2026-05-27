@@ -38,7 +38,7 @@ export default function PowerfulCart() {
                     {cards.map((card) => (
                         <div key={card.id} className='bg-[#FFFFFF] rounded-[15px] py-[30px] px-[35px] max-[480px]:py-[20px] max-[480px]:px-[20px]'>
                             <div className='py-[15px] w-[100px] m-auto mb-[20px] max-[480px]:mb-[5px]'>
-                                <img src={card.image} alt='HubCart' />
+                                <img src={card.image} alt='HubCart' loading='lazy' decoding='async' />
                             </div>
                             <h3 className='text-[24px] leading-[30px] font-bold mb-[15px]'>{card.title}</h3>
                             <p className='text-[16px] leading-[23px]'>{card.description}</p>

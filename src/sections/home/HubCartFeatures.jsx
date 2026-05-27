@@ -55,16 +55,16 @@ export default function HubCartFeatures() {
 
     return (
         <section className='relative'>
-            <div className='absolute z-0'>
-                <img src="https://hubsyntax.com/cart-images/Mask group (14).svg" alt="" />
+            <div className='absolute z-0 hidden xl:block'>
+                <img src="https://hubsyntax.com/cart-images/Mask group (14).svg" alt="" loading="lazy" decoding="async" />
             </div>
 
-            <Container className='relative z-10'>
-                <div className='grid grid-cols-2 gap-[80px] items-center'>
+            <Container className='relative z-10 py-[40px] max-[540px]:py-[25px]'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-[40px] lg:gap-[80px] items-center'>
 
                     {/* Left - Accordion */}
                     <div>
-                        <h2 className='font-bold text-[55px] leading-[60px] mb-[30px]'>HubCart Features</h2>
+                        <h2 className='font-bold  max-[540px]:text-[35px] text-[45px] lg:text-[50px] leading-[45px] lg:leading-[60px] max-[540px]:mb-[20px] mb-[30px]'>HubCart Features</h2>
                         <div className='flex flex-col'>
                             {features.map((feature) => (
                                 <div key={feature.id} className=' py-[15px]'>
@@ -77,6 +77,8 @@ export default function HubCartFeatures() {
                                             <img
                                                 src='https://hubsyntax.com/cart-images/DropDown.png'
                                                 alt='toggle'
+                                                loading='lazy'
+                                                decoding='async'
                                                 className={`w-[15px] h-[8px] transition-transform duration-300 ${openId === feature.id ? 'rotate-180' : 'rotate-0'
                                                     }`}
                                             />
@@ -93,18 +95,20 @@ export default function HubCartFeatures() {
                     </div>
 
                     {/* Right - Image */}
-                    <div className='flex justify-end items-start'>
+                    <div className='flex justify-end items-start w-[80%] max-[430px]:w-[100%] max-[540px]:w-[90%] mx-auto md:w-full'>
                         <img
                             src='https://hubsyntax.com/cart-images/CartFeaturess.png'
                             alt='HubCart Features'
-                            className='w-[80%] h-auto ml-auto'
+                            loading='lazy'
+                            decoding='async'
+                            className='w-[100%] lg:w-[80%] h-auto ml-auto'
                         />
                     </div>
 
                 </div>
             </Container>
-            <div className='absolute z-0 right-25 top-0'>
-                <img src="https://hubsyntax.com/cart-images/Mask group (16).svg" alt="" />
+            <div className='absolute z-0 right-25 top-0 hidden xl:block'>
+                <img src="https://hubsyntax.com/cart-images/Mask group (16).svg" alt="" loading="lazy" decoding="async" />
             </div>
         </section>
     )
