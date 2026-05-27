@@ -14,6 +14,7 @@ export default function Home() {
     <div>
       <IncreaseSales />
       <Features />
+      <CustomizeCart />
       {/* <Features />
       <CustomizeCart />
       <PowerfulCart />

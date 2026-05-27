@@ -5,7 +5,7 @@ import Button from '../../components/Button'
 export default function IncreaseSales() {
   return (
     <section className='relative'>
-      <Container className='py-[40px] max-[540px]:py-[20px] relative z-10'>
+      <Container className='py-[40px] max-[540px]:py-[25px] relative z-10'>
         <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-[20px]'>
           <div className='flex flex-col relative z-10'>
             <h1 className='font-semibold text-[50px] lg:text-[65px] max-[540px]:text-[40px] max-[540px]:leading-[45px] leading-[55px] lg:leading-[70px] max-w-none md:max-w-[660px]'>

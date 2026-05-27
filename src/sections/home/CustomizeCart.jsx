@@ -26,9 +26,9 @@ const steps = [
 export default function CustomizeCart() {
     return (
         <section className='relative'>
-            <Container className='py-[80px]'>
-                <div className='grid grid-cols-2 gap-[60px] items-center px-[90px]'>
-                    <div className='max-w-[80%]'>
+            <Container className='py-[40px] max-[540px]:py-[25px]'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[60px] items-center px-[0] md:px-[20px] lg:px-[90px]'>
+                    <div className='w-full max-[390px]:max-w-[100%] max-[430px]:max-w-[90%] max-[540px]:max-w-[80%] max-w-[60%] mx-auto md:max-w-[80%]'>
                         <img
                             src='https://hubsyntax.com/cart-images/custmiseCart.png'
                             alt='HubCart'
@@ -36,11 +36,11 @@ export default function CustomizeCart() {
                         />
                     </div>
                     <div>
-                        <h2 className='font-bold text-[50px] leading-[60px] mb-[30px]'>How It Works</h2>
+                        <h2 className='font-bold max-[540px]:text-[35px] text-[45px] lg:text-[50px] leading-[45px] lg:leading-[60px] max-[540px]:mb-[10px] mb-[30px]'>How It Works</h2>
                         {steps.map((step) => (
-                            <div key={step.id} className='mb-[20px]'>
+                            <div key={step.id} className=' max-[540px]:mb-[10px] mb-[20px]'>
                                 <p className='text-[24px] leading-[30px] font-bold mb-[15px]'>{step.title}</p>
-                                <p className='text-[16px] leading-[23px]'>{step.description}</p>
+                                <p className=' max-[540px]:text-[14px] text-[16px] max-[540px]:leading-[20px] leading-[23px]'>{step.description}</p>
                             </div>
                         ))}
                         <div>
@@ -49,7 +49,7 @@ export default function CustomizeCart() {
                     </div>
                 </div>
             </Container>
-            <div className='absolute right-0 top-70 z-0'>
+            <div className='absolute right-0 top-70 z-0 hidden lg:block'>
                 <img src="https://hubsyntax.com/cart-images/Mask group (12).svg" alt="" />
             </div>
         </section>
