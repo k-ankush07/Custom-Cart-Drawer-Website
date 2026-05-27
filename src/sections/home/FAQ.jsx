@@ -33,10 +33,10 @@ export default function FAQ() {
 
   return (
     <section className='relative z-10'>
-      <Container className="pt-[20px]">
-       <div className='px-[78px]'>
+      <Container className="py-[40px] max-[540px]:py-[25px]">
+       <div className='px-[0] lg:px-[78px]'>
           <div className="text-center">
-            <h2 className="font-bold text-[50px] leading-[60px] ">
+            <h2 className="font-bold max-[540px]:text-[35px] text-[45px] lg:text-[50px] leading-[45px] lg:leading-[60px]">
               Frequently asked questions
             </h2>
           </div>
@@ -60,11 +60,11 @@ export default function FAQ() {
                       alt={isOpen ? 'collapse' : 'expand'}
                       loading="lazy"
                       decoding="async"
-                      className="w-7 h-7 flex-shrink-0"
+                      className="w-5 sm:w-7 h-5 sm:h-7 flex-shrink-0"
                     />
                   </button>
                   {isOpen && (
-                    <div className="px-6 pb-4 text-[18px] leading-[28px] text-[#000000]">
+                    <div className="px-6 pb-4 text-[18px] max-[540px]:text-[16px] max-[540px]:leading-[22px] leading-[28px] text-[#000000]">
                       {faq.a}
                     </div>
                   )}

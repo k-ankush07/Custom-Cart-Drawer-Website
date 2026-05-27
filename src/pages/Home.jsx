@@ -18,14 +18,9 @@ export default function Home() {
       <PowerfulCart />
       <RevenueGrowth />
       <HubCartFeatures />
-      {/* <Features />
-      <CustomizeCart />
-      <PowerfulCart />
-      <RevenueGrowth />
-      <HubCartFeatures />
       <Pricing />
       <FAQ />
-      <CTA /> */}
+      <CTA />
     </div>
   )
 }
