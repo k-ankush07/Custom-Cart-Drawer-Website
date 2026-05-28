@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../components/Container'
-import BuiltCart from '../sections/About/BuiltCart'
+import BannerSection from '../components/BannerSection'
 import ShopifyCarts from '../sections/About/ShopifyCarts'
 import OurMission from '../sections/About/OurMission'
 import DrawerDesigned from '../sections/About/DrawerDesigned'
@@ -11,7 +11,12 @@ import CTA from '../sections/home/CTA'
 export default function About() {
   return (
     <div>
-      <BuiltCart />
+      <BannerSection
+        heading='Built to Turn More Carts Into Revenue'
+        paragraph='We created this cart drawer app after seeing thousands of Shopify stores lose revenue with outdated cart experiences. Our goal is simple: help merchants increase conversions, upsells, and average order value with a faster, smarter cart experience.'
+        buttonText='Try Demo'
+        img='https://hubsyntax.com/cart-images/aboutBanner.svg'
+      />
       <ShopifyCarts />
       <OurMission
         img='https://hubsyntax.com/cart-images/Rectangle%20240648554.svg'

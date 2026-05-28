@@ -1,5 +1,5 @@
 import React from 'react'
-import IncreaseSales from '../sections/home/IncreaseSales'
+import BannerSection from '../components/BannerSection'
 import Features from '../sections/home/SmartFeatures'
 import CustomizeCart from "../sections/home/CustomizeCart"
 import PowerfulCart from '../sections/home/PowerfulCart'
@@ -12,7 +12,12 @@ import CTA from '../sections/home/CTA'
 export default function Home() {
   return (
     <div>
-      <IncreaseSales />
+      <BannerSection
+        heading='Increase Your Sales with Smart Checkout & Upsell Tools'
+        paragraph=' Boost conversions and average order value with a high-converting cart drawer built for modern ecommerce brands.'
+        buttonText='Try Demo'
+        img='https://hubsyntax.com/cart-images/mainImage.svg'
+      />
       <Features />
       <CustomizeCart />
       <PowerfulCart />
