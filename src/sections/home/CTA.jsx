@@ -7,11 +7,7 @@ export default function CTA() {
     <section className='relative z-20'>
       <Container className='py-[40px] max-[540px]:py-[25px]'>
         <div
-          className="relative overflow-hidden rounded-[15px] max-[390px]:px-4 px-8 max-[390px]:py-4 py-[30px] md:py-[80px] text-center text-white"
-          style={{
-            background: '#512B6C'
-          }}
-        >
+          className="relative bg-[#512B6C] overflow-hidden rounded-[15px] max-[390px]:px-4 px-8 max-[390px]:py-4 py-[30px] md:py-[80px] text-center text-white" >
           <h2 className='font-bold font-bold max-[540px]:text-[35px] text-[45px] lg:text-[55px] leading-[45px] lg:leading-[60px] mb-[20px] text-center'>
             Turn More Carts Into More Revenue
           </h2>
