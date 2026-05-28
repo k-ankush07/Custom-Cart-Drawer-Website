@@ -1,7 +1,23 @@
 import React from 'react'
+import Container from '../../components/Container'
 
 export default function BlogHeading() {
+    
     return (
-        <div>BlogHeading</div>
+        <section >
+            <Container className='relative z-10 py-[40px] max-[540px]:py-[25px]'>
+                <div className='text-center'>
+                    <h1 className='font-bold max-[540px]:text-[35px] text-[45px] lg:text-[65px] max-w-[1000px] mx-auto leading-[50px] lg:leading-[70px] mb-[20px]'>
+                      Your Hub for Shopify Growth & Conversion Tips
+                    </h1>
+                    <p className='max-[540px]:text-[16px] text-[18px] max-[540px]:leading-[22px] leading-[28px] mx-auto '>
+                       Stay ahead with ecommerce insights, CRO strategies, and cart optimization techniques built for Shopify merchants.
+                    </p>
+                </div>
+            </Container>
+            <div className='absolute z-0 top-0 right-0 hidden xl:block'>
+                <img src="https://hubsyntax.com/cart-images/contactbg.svg" alt="" loading="lazy" decoding="async" />
+            </div>
+        </section>
     )
 }
