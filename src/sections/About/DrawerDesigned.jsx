@@ -17,7 +17,7 @@ export default function DrawerDesigned() {
 
             <Container className="py-[40px] max-[540px]:py-[25px] relative z-10">
 
-                <div className="flex flex-col lg:flex-row items-center gap-[75px]">
+                <div className="flex flex-col md:flex-row items-center gap-[30px] lg:gap-[75px]">
 
                     {/* ── LEFT COLUMN ── */}
                     <div className="w-full flex flex-col justify-center">

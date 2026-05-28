@@ -6,7 +6,7 @@ export default function OurMission({ img, heading, paragraph1, paragraph2, parag
         <section className="relative" >
             <Container className="py-[40px] max-[540px]:py-[25px] relative z-10">
 
-                <div className="flex flex-col md:flex-row items-center gap-10 md:gap-[75px]">
+                <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-[75px]">
 
                     {/* Left: Image */}
                     <div className="w-full md:w-1/2 flex-shrink-0">
