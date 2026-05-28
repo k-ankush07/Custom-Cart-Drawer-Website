@@ -34,6 +34,7 @@ export default function Header() {
             <NavLink to="/" end className={linkClass}>Home</NavLink>
             <NavLink to="/pricing" className={linkClass}>Pricing</NavLink>
             <NavLink to="/about" className={linkClass}>About us</NavLink>
+            <NavLink to="/blog" className={linkClass}>Blog </NavLink>
             <NavLink to="/contact" className={linkClass}>Contact us</NavLink>
           </nav>
 
@@ -65,7 +66,7 @@ export default function Header() {
 
       {/* Slide-in Drawer */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-full sm:w-[75%] sm:max-w-[400px] z-[50] transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`lg:hidden fixed top-0 right-0 h-full w-full sm:w-[75%]  z-[50] transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         style={{ background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%)' }}
       >
@@ -91,6 +92,7 @@ export default function Header() {
           <NavLink to="/features" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>Features</NavLink>
           <NavLink to="/pricing" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>Pricing</NavLink>
           <NavLink to="/about" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>About us</NavLink>
+          <NavLink to="/blog" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>Blog </NavLink>
           <NavLink to="/contact" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>Contact us</NavLink>
         </nav>
 
