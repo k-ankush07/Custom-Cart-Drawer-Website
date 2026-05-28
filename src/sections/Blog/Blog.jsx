@@ -55,7 +55,7 @@ export default function Blog() {
         </h2>
 
         {/* 3-column grid */}
-        <div className="grid grid-cols-3 gap-[50px] max-[768px]:grid-cols-1 max-[1024px]:grid-cols-2">
+        <div className="grid grid-cols-3 gap-[30px] lg:gap-[50px] max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
           {blogPosts.map((post) => (
             <div
               key={post.id}
@@ -106,7 +106,7 @@ export default function Blog() {
           ].map((item, i) => (
             <button
               key={i}
-              className={`w-[60px] h-[60px] border-0 cursor-pointer rounded-[16px] text-[22px] border flex items-center justify-center transition
+              className={`h-[35px] w-[35px] sm:w-[60px] sm:h-[60px] border-0 cursor-pointer rounded-[8px] sm:rounded-[16px] text-[15px] sm:text-[22px] border flex items-center justify-center transition
         ${item.label === "1"
                   ? "bg-[#512B6C]  text-white"
                   : "bg-white text-black"
@@ -116,7 +116,7 @@ export default function Blog() {
                 <img
                   src={item.src}
                   alt=""
-                  className="w-[14px] h-[14px]"
+                  className="w-[10px] h-[10px] sm:w-[14px] sm:h-[14px]"
                 />
               ) : (
                 item.label
