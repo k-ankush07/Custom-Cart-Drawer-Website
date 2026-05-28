@@ -10,6 +10,7 @@ export default function Articles() {
             <TopHeading
                 heading='How To Reduce Cart Abandonment on Shopify'
                 paragraph='Discover proven strategies Shopify brands use to reduce abandoned carts, improve checkout completion, and increase revenue with a better cart experience.'
+                showGradient
             />
             <ArticlesPage />
             <FAQ />
