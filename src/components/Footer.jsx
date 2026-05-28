@@ -30,6 +30,7 @@ export default function Footer() {
           </p>
 
           <nav className="mt-[20px] flex flex-wrap items-center justify-center gap-x-10 gap-y-3 max-[540px]:text-[16px] text-[18px]">
+            <Link to="/" className="text-gray-200 transition-colors hover:text-white">Home</Link>
             <Link to="/about" className="text-gray-200 transition-colors hover:text-white">About Us</Link>
             <Link to="/contact" className="text-gray-200 transition-colors hover:text-white">Contact Us</Link>
             <Link to="/pricing" className="text-gray-200 transition-colors hover:text-white">Pricing</Link>
