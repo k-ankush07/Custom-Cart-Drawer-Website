@@ -37,14 +37,14 @@ export default function ShopifyCarts() {
                 </div>
 
                 {/* Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-[89px]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-[40px] lg:gap-[89px]">
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="border-2 border-white rounded-[30px] p-[50px] max-[540px]:p-[30px] flex flex-col justify-center text-center"
+                            className="border-2 border-white rounded-[30px] p-[20px] lg:p-[50px] max-[540px]:p-[30px] flex flex-col justify-center text-center"
                         >
                             {/* Icon Circle */}
-                            <div className="bg-white h-[120px] w-[120px] rounded-full flex items-center justify-center p-[20px] mb-[30px] mx-auto">
+                            <div className="bg-white max-[480px]:h-[100px] h-[120px] max-[480px]:w-[100px] w-[120px] rounded-full flex items-center justify-center p-[20px] mb-[30px] mx-auto">
                                 <img src={card.icon} alt={card.title} />
                             </div>
 
