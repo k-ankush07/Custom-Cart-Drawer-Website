@@ -6,6 +6,7 @@ import OurMission from '../sections/About/OurMission'
 import DrawerDesigned from '../sections/About/DrawerDesigned'
 import CartRevenue from '../sections/About/CartRevenue'
 import DesginRevenue from '../sections/About/DesginRevenue'
+import FAQ from '../sections/home/FAQ'
 import CTA from '../sections/home/CTA'
 
 export default function About() {
@@ -17,6 +18,8 @@ export default function About() {
       <DrawerDesigned />
       <CartRevenue />
       <DesginRevenue />
+      <FAQ />
+      <CTA />
     </div>
   )
 }
