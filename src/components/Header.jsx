@@ -35,6 +35,7 @@ export default function Header() {
             <NavLink to="/pricing" className={linkClass}>Pricing</NavLink>
             <NavLink to="/about" className={linkClass}>About us</NavLink>
             <NavLink to="/blog" className={linkClass}>Blog </NavLink>
+            <NavLink to="/articles" className={linkClass}>Articles </NavLink>
             <NavLink to="/contact" className={linkClass}>Contact us</NavLink>
           </nav>
 
@@ -93,6 +94,7 @@ export default function Header() {
           <NavLink to="/pricing" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>Pricing</NavLink>
           <NavLink to="/about" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>About us</NavLink>
           <NavLink to="/blog" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>Blog </NavLink>
+          <NavLink to="/articles" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>Articles </NavLink>
           <NavLink to="/contact" className={mobileLinkClass} onClick={() => setMenuOpen(false)}>Contact us</NavLink>
         </nav>
 
