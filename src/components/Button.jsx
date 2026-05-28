@@ -4,6 +4,7 @@ const variants = {
   primary: 'bg-black text-white hover:bg-gray-800',
   secondary: 'bg-white text-black border border-gray-300 hover:bg-gray-100',
   ghost: 'bg-transparent text-black border hover:bg-gray-100',
+  pill: 'bg-white text-black hover:bg-gray-100 rounded-full justify-center',
 }
 
 const sizes = {

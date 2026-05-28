@@ -32,7 +32,6 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden items-center gap-8 lg:flex">
             <NavLink to="/" end className={linkClass}>Home</NavLink>
-            <NavLink to="/features" className={linkClass}>Features</NavLink>
             <NavLink to="/pricing" className={linkClass}>Pricing</NavLink>
             <NavLink to="/about" className={linkClass}>About us</NavLink>
             <NavLink to="/contact" className={linkClass}>Contact us</NavLink>
