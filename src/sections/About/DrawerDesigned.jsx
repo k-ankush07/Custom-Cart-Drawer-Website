@@ -59,7 +59,9 @@ export default function DrawerDesigned() {
                         {/* Group SVG (cart drawer mockup stack) */}
                         <img
                             src="https://hubsyntax.com/cart-images/Group 1707480084.svg"
-                            alt="Cart Drawer Preview"
+                            alt='HubCart'
+                            loading='lazy'
+                            decoding='async'
                             className="w-full relative z-10"
                         />
                     </div>

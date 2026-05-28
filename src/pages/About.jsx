@@ -14,7 +14,7 @@ export default function About() {
     <div>
       <BuiltCart />
       <ShopifyCarts />
-      <OurMission />
+      <OurMission  />
       <DrawerDesigned />
       <CartRevenue />
       <DesginRevenue />
