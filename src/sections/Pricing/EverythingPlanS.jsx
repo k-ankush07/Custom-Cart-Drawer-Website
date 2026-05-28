@@ -43,7 +43,7 @@ export default function EverythingPlan() {
                 </div>
 
                 {/* Table */}
-                <div className='rounded-[12px] border border-[#FFFFFF]'>
+                <div className='overflow-x-auto rounded-[12px] border border-[#FFFFFF]'>
                     <table className='w-full border-collapse'>
                         <thead>
                             <tr>
