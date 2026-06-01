@@ -8,9 +8,7 @@ export default function CaseStudies() {
     return (
         <div>
             <CartStudio />
-            <Blog />
-            <FAQ />
-            <CTA />
+    
         </div>
     )
 }
