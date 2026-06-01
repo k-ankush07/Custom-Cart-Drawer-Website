@@ -8,9 +8,10 @@ import About from './pages/About'
 import Blog from './pages/Blog'
 import Articles from './pages/Articles'
 import Contact from './pages/Contact'
+import CaseStudies from './pages/CaseStudies'
 
 export default function App() {
-  
+
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -18,8 +19,9 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/casestudie" element={<CaseStudies />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} /> 
+          <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="*" element={<Home />} />
