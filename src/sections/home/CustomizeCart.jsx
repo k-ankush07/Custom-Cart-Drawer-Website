@@ -3,25 +3,25 @@ import Container from '../../components/Container'
 import Button from '../../components/Button'
 
 const steps = [
-    {
-        id: 1,
-        title: 'Customize Your Cart Drawer',
-        description:
-            'Design a branded cart experience with rewards, progress bars, and smart checkout features.',
-    },
-    {
-        id: 2,
-        title: 'Add Smart Upsells',
-        description:
-            'Show personalized upsells, bundles, and product recommendations directly inside the cart drawer.',
-    },
-    {
-        id: 3,
-        title: 'Increase Revenue Automatically',
-        description:
-            'Boost conversions and average order value with a faster, optimized checkout experience.',
-    },
-]
+  {
+    id: 1,
+    title: 'Customize Your Cart',
+    description:
+      'Build a branded cart experience with rewards, progress bars, and checkout features that fit your store.',
+  },
+  {
+    id: 2,
+    title: 'Add Smart Upsells to Your Cart',
+    description:
+      'Show personalized upsells, bundles, and product recommendations right in the cart to help increase order value.',
+  },
+  {
+    id: 3,
+    title: 'Increase Revenue Automatically',
+    description:
+      'Drive more conversions with a faster, optimized checkout experience that helps turn more carts into completed purchases.',
+  },
+];
 
 export default function CustomizeCart() {
     return (
@@ -38,7 +38,7 @@ export default function CustomizeCart() {
                         />
                     </div>
                     <div>
-                        <h2 className='font-bold max-[540px]:text-[35px] text-[45px] lg:text-[50px] leading-[45px] lg:leading-[60px] max-[540px]:mb-[10px] mb-[30px]'>How It Works</h2>
+                        <h2 className='font-bold max-[540px]:text-[35px] text-[45px] lg:text-[50px] leading-[45px] lg:leading-[60px] max-[540px]:mb-[10px] mb-[20px]'>How It Works</h2>
                         {steps.map((step) => (
                             <div key={step.id} className=' max-[540px]:mb-[10px] mb-[20px]'>
                                 <p className='text-[24px] leading-[30px] font-bold mb-[15px]'>{step.title}</p>

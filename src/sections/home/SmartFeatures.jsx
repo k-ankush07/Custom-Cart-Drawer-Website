@@ -33,7 +33,7 @@ const features = [
 ]
 
 export default function Features() {
-  const [activeIndex, setActiveIndex] = useState(0) // first item open by default
+  const [activeIndex, setActiveIndex] = useState(0) 
 
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index)
