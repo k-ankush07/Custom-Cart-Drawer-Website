@@ -50,9 +50,6 @@ export default function CartBlogPage() {
     return (
         <section>
             <Container className="relative z-10 py-[40px] max-[540px]:py-[25px]">
-                <h2 className="font-bold text-[30px] leading-[40px] mb-[20px] text-white">
-                    Blog
-                </h2>
 
                 {/* 3-column grid */}
                 <div className="grid grid-cols-3 gap-[30px] lg:gap-[50px] max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">

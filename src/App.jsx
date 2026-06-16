@@ -9,6 +9,8 @@ import Blog from './pages/Blog'
 import Articles from './pages/Articles'
 import Contact from './pages/Contact'
 import CaseStudies from './pages/CaseStudies'
+import Terms from './pages/Terms'
+import Privacy from './pages/Privacy'
 
 export default function App() {
 
@@ -23,6 +25,8 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
