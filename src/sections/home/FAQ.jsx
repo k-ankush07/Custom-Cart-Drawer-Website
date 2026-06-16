@@ -4,26 +4,29 @@ import Container from '../../components/Container'
 const faqs = [
   {
     q: 'What is HubCart?',
-    a: 'HubCart is a cart optimization platform for Shopify brands that helps increase conversions, boost average order value (AOV), and reduce cart abandonment using smart upsells, rewards, and checkout optimization tools.',
+    a: 'HubCart is designed to help Shopify brands increase sales with smarter upsells, rewards, and a better checkout experience.',
   },
   {
-    q: 'Does HubCart work with Shopify?',
-    a: 'Yes — colors, typography, spacing, and layout are fully customizable to match your brand.',
+    q: 'Does HubCart increase the average order value?',
+    a: 'Yes. HubCart helps merchants increase average order value through strategic upsells, cross-sells, rewards, and cart incentives that encourage customers to purchase more.',
   },
   {
     q: 'How does HubCart increase average order value?',
-    a: 'Product recommendations, bundle offers, free-gift unlocks, and threshold-based promotions are all supported.',
+    a: 'HubCart helps increase average order value through strategic upsells, cross-sells, and reward-based incentives that encourage customers to add more to their purchase.',
   },
   {
     q: 'Can I customize the cart drawer design?',
-    a: 'HubCart works with every Shopify theme — Dawn, Online Store 2.0, and custom themes alike.',
+    a: 'Absolutely. You can tailor the cart drawer to reflect your brand by adjusting its layout, content, and styling to create a consistent shopping experience.',
   },
   {
-    q: ' What types of upsells can I create?',
-    a: 'Product recommendations, bundle offers, free-gift unlocks, and threshold-based promotions are all supported.',
+    q: 'What types of upsells can I create?',
+    a: 'You can create product recommendations, frequently bought together offers, free gift promotions, and cart-based incentives designed to drive additional sales.',
   },
-
-]
+  {
+    q: 'Do I need coding experience to use HubCart?',
+    a: 'No. HubCart is designed to be simple and intuitive, so you can get up and running without any coding experience. If you need more advanced functionality, developers have the flexibility to customize it further.',
+  },
+];
 
 const plusImg = 'https://hubsyntax.com/cart-images/CartPluss.png'
 const minusImg = 'https://hubsyntax.com/cart-images/CartMinus.png'
