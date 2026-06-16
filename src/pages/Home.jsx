@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div>
       <BannerSection
-        heading='Increase Your Sales with Smart Checkout & Upsell Tools'
-        paragraph=' Boost conversions and average order value with a high-converting cart drawer built for modern ecommerce brands.'
+        heading='Boost Your Revenue with Smart Checkout & Upsell Tools'
+        paragraph='Increase AOV and revenue with smart upsells, rewards, and a friction-free checkout experience.'
         buttonText='Try Demo'
         img='https://hubsyntax.com/cart-images/mainImage.svg'
       />
