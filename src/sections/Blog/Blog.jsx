@@ -1,12 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Container from '../../components/Container'
+
+const slugify = (text) =>
+  text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 
 const blogPosts = [
   {
     id: 1,
     date: 'May 25, 2026',
-    title: 'Grow Your Shopify Store Smarter',
-    desc: 'Actionable conversion strategies...',
+    title: ' How to Reduce Cart Abandonment Rate and Maximize E-commerce Conversions',
+    desc: 'In e-commerce, one of the most critical challenges businesses face is the high rate at which potential customers leave without completing their purchase. This behavior is measured through the Cart Abandonment Rate, which represents the percentage of users who add products to their cart but exit the website before finishing the checkout process.',
     img: 'https://hubsyntax.com/cart-images/Rectangle 240648321.svg',
   },
   {
@@ -47,7 +55,7 @@ const blogPosts = [
 ]
 
 export default function Blog() {
-  
+
   return (
     <section>
       <Container className="relative z-10 py-[40px] max-[540px]:py-[25px]">
@@ -58,9 +66,10 @@ export default function Blog() {
         {/* 3-column grid */}
         <div className="grid grid-cols-3 gap-[30px] lg:gap-[50px] max-[640px]:grid-cols-1 max-[1024px]:grid-cols-2">
           {blogPosts.map((post) => (
-            <div
+            <Link
+              to={`/blog/${slugify(post.title)}`}
               key={post.id}
-              className="bg-[#1D1E20] rounded-xl overflow-hidden flex flex-col border border-[#FFFFFF33]"
+              className="group/card bg-[#1D1E20] rounded-xl overflow-hidden flex flex-col border border-[#FFFFFF33] transition-colors hover:border-[#512B6C]"
             >
               <img
                 src={post.img}
@@ -73,19 +82,20 @@ export default function Blog() {
                   {post.title}
                 </h4>
                 <p className="text-[16px] leading-[1.5] mb-4 flex-1">
-                  {post.desc}
+                  {post.desc?.split(' ').slice(0, 15).join(' ')}
+                  {post.desc?.split(' ').length > 15 ? '...' : ''}
                 </p>
-                <button className="group flex items-center gap-[10px] text-[18px] font-medium w-fit cursor-pointer">
+                <span className="group flex items-center gap-[10px] text-[18px] font-medium w-fit cursor-pointer">
                   Read more
 
                   <img
                     src="https://hubsyntax.com/cart-images/Vector (9).svg"
                     alt=""
-                    className="w-[10px] h-[10px] transition-transform duration-300 group-hover:rotate-45"
+                    className="w-[10px] h-[10px] transition-transform duration-300 group-hover/card:rotate-45"
                   />
-                </button>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
