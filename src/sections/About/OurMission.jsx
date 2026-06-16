@@ -25,15 +25,15 @@ export default function OurMission({ img, heading, paragraph1, paragraph2, parag
                             {heading}
                         </h2>
 
-                        <p className="text-[18px] max-[540px]:text-[16px] py-[20px] max-[540px]:py-[16px]">
+                        <p className="text-[18px] max-[540px]:text-[16px] py-[15px] max-[540px]:py-[10px]">
                             {paragraph1}
                         </p>
 
-                        <p className="text-[18px] max-[540px]:text-[16px] py-[20px] max-[540px]:py-[16px]">
+                        <p className="text-[18px] max-[540px]:text-[16px] py-[15px] max-[540px]:py-[10px]">
                             {paragraph2}
                         </p>
 
-                        <p className="text-[18px] max-[540px]:text-[16px] py-[20px] max-[540px]:py-[16px]">
+                        <p className="text-[18px] max-[540px]:text-[16px] py-[15px] max-[540px]:py-[10px]">
                             {paragraph3}
                         </p>
                     </div>

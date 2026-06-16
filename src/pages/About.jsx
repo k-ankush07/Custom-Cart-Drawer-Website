@@ -12,8 +12,8 @@ export default function About() {
   return (
     <div>
       <BannerSection
-        heading='Built to Turn More Carts Into Revenue'
-        paragraph='We created this cart drawer app after seeing thousands of Shopify stores lose revenue with outdated cart experiences. Our goal is simple: help merchants increase conversions, upsells, and average order value with a faster, smarter cart experience.'
+        heading='Built for merchants who want to turn more carts into revenue.'
+        paragraph='We built HubCart to help Shopify merchants turn more carts into revenue with a smoother, more modern shopping experience. Our goal is simple: increase conversions, raise average order value, and make checkout feel effortless for every customer.'
         buttonText='Try Demo'
         img='https://hubsyntax.com/cart-images/aboutBanner.svg'
       />
@@ -21,19 +21,18 @@ export default function About() {
       <OurMission
         img='https://hubsyntax.com/cart-images/Rectangle%20240648554.svg'
         heading='Our Mission'
-        paragraph1='Our mission is to help Shopify merchants create faster, smarter, and higher-converting cart experiences.'
-        paragraph2='We believe ecommerce brands should be able to increase revenue, improve customer experience, and boost average order value without relying on complicated tools or custom development.'
-        paragraph3='Our focus is on building tools that simplify the checkout journey, reduce friction, and enable customers to complete purchases with confidence. We&apos;re committed to helping brands unlock more value from the traffic they already have while creating shopping experiences customers genuinely enjoy.'
+        paragraph1='Our mission is to help merchants create faster, smarter, and more engaging cart experiences that drive higher conversions.'
+        paragraph2='We believe ecommerce brands should have access to simple, effective tools that help increase revenue, improve customer satisfaction, and boost average order value—without the need for complex software or custom development.'
+        paragraph3="That's why we build cart optimization solutions that streamline the path to purchase, reduce cart abandonment, and encourage customers to complete their orders with confidence. From upsells and cross-sells to personalized cart experiences, our tools help brands maximize every shopping session."
         gradientImg='https://hubsyntax.com/cart-images/Mask group (30).svg'
       />
       <DrawerDesigned />
       <CartRevenue />
       <OurMission
         img='https://hubsyntax.com/cart-images/cartRevenues.svg'
-        heading='A Cart Drawer Designed to Increase Revenue'
-        paragraph1='We’ve worked closely with ecommerce brands and noticed one common issue the cart experience was being ignored.'
-        paragraph2='While brands spent heavily on ads and product pages, the actual cart remained outdated.'
-        paragraph3=' We built this app to help Shopify merchants unlock more revenue from traffic they already have'
+        heading='A Cart Drawer Built to Recover Lost Revenue '
+        paragraph1='Many Shopify stores focus on acquiring traffic, but the cart experience is often an afterthought.'
+        paragraph2='Our cart drawer helps increase average order value and reduce cart abandonment with targeted upsells, cross-sells, free shipping incentives, and a streamlined checkout experience—all designed to help you get more from the traffic you already have. '
         gradientImg='https://hubsyntax.com/cart-images/Mask group (30).svg'
       />
       <FAQ />

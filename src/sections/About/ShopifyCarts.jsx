@@ -4,21 +4,21 @@ import Container from '../../components/Container'
 const cards = [
     {
         icon: "https://hubsyntax.com/cart-images/cartCon.svg",
-        title: "Low cart conversions",
+        title: "Low Cart Conversions",
         description:
-            "Design a branded cart experience with rewards, progress bars, and smart checkout features.",
+            "Even interested shoppers leave without purchasing when the cart experience creates friction.",
     },
     {
         icon: "https://hubsyntax.com/cart-images/upsellOpp.svg",
-        title: "No upsell opportunities",
+        title: "No Upsell Opportunities",
         description:
-            "Most stores miss easy revenue because their cart experience doesn't encourage additional purchases.",
+            "Many stores leave revenue on the table by failing to encourage additional purchases.",
     },
     {
         icon: "https://hubsyntax.com/cart-images/cluxUx.svg",
-        title: "Slow & clunky UX",
+        title: "Slow & Clunky UX",
         description:
-            "Traditional cart pages interrupt the buying journey and reduce purchase momentum.",
+            "A slow, outdated cart experience disrupts the buying journey and drives customers away.",
     },
 ]
 
@@ -29,7 +29,7 @@ export default function ShopifyCarts() {
                 {/* Heading */}
                 <div className="text-center">
                     <h2 className="font-semibold max-[540px]:text-[35px] text-[45px] lg:text-[55px] max-[540px]:leading-[45px] leading-[60px]">
-                        Why Most Shopify Carts Fail to Convert
+                        Why Most Merchants Fail to Convert Cart into Sales
                     </h2>
                     <p className="text-[18px] max-[540px]:text-[16px] py-[20px] max-[540px]:py-[16px]">
                         Default cart experiences create friction, reduce upsells, and quietly cost your store revenue every single day.
