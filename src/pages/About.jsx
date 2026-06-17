@@ -5,7 +5,6 @@ import ShopifyCarts from '../sections/About/ShopifyCarts'
 import OurMission from '../sections/About/OurMission'
 import DrawerDesigned from '../sections/About/DrawerDesigned'
 import CartRevenue from '../sections/About/CartRevenue'
-import FAQ from '../sections/home/FAQ'
 import CTA from '../sections/home/CTA'
 
 export default function About() {
@@ -35,7 +34,6 @@ export default function About() {
         paragraph2='Our cart drawer helps increase average order value and reduce cart abandonment with targeted upsells, cross-sells, free shipping incentives, and a streamlined checkout experience—all designed to help you get more from the traffic you already have. '
         gradientImg='https://hubsyntax.com/cart-images/Mask group (30).svg'
       />
-      <FAQ />
       <CTA />
     </div>
   )

@@ -1,7 +1,6 @@
 import React from 'react'
 import Blog from '../sections/Blog/Blog'
 import TopHeading from '../components/TopHeading'
-import FAQ from '../sections/home/FAQ'
 import CTA from '../sections/home/CTA'
 
 export default function BlogPage() {
@@ -13,7 +12,6 @@ export default function BlogPage() {
                 showGradient
             />
             <Blog />
-            <FAQ />
             <CTA />
         </div>
     )

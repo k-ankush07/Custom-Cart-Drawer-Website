@@ -1,7 +1,6 @@
 import React from 'react'
 import ContactForm from '../sections/Contact/ContactForm'
 import Map from '../sections/Contact/Map'
-import FAQ from '../sections/home/FAQ'
 import CTA from '../sections/home/CTA'
 import TopHeading from '../components/TopHeading'
 export default function Contact() {
@@ -15,7 +14,6 @@ export default function Contact() {
       />
       <ContactForm />
       <Map />
-      <FAQ />
       <CTA />
     </div>
   )
