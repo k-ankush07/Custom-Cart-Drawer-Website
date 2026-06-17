@@ -31,7 +31,7 @@ const faqs = [
 const plusImg = 'https://hubsyntax.com/cart-images/CartPluss.png'
 const minusImg = 'https://hubsyntax.com/cart-images/CartMinus.png'
 
-export default function FAQ() {
+export default function FAQ({ faqs: faqsProp = faqs }) {
   const [openIndex, setOpenIndex] = useState(0)
 
   return (
@@ -45,7 +45,7 @@ export default function FAQ() {
           </div>
 
           <div className="mx-auto mt-[20px] space-y-5">
-            {faqs.map((faq, i) => {
+            {faqsProp.map((faq, i) => {
               const isOpen = openIndex === i
               return (
                 <div

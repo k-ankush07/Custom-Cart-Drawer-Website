@@ -5,6 +5,29 @@ import EverythingPlan from '../sections/Pricing/EverythingPlanS'
 import FAQ from '../sections/home/FAQ'
 import CTA from '../sections/home/CTA'
 
+const pricingFaqs = [
+  {
+    q: 'Which plan should I choose?',
+    a: "Pick the plan that matches your store's size and growth goals.",
+  },
+  {
+    q: 'Can I upgrade anytime?',
+    a: 'Yes, you can switch plans whenever you need.',
+  },
+  {
+    q: "What's included in the Free plan?",
+    a: 'Core cart features, customization, and email support.',
+  },
+  {
+    q: "What's the difference between Starter and Growth?",
+    a: 'Growth unlocks advanced features, greater customization, and priority support for scaling stores.',
+  },
+  {
+    q: 'Can I cancel anytime?',
+    a: 'Yes, you can cancel your subscription at any time.',
+  },
+]
+
 export default function Pricing() {
   return (
     <div>
@@ -16,7 +39,7 @@ export default function Pricing() {
       />
       <PricingSection showGradient={false} />
       <EverythingPlan />
-      <FAQ />
+      <FAQ faqs={pricingFaqs} />
       <CTA />
     </div>
   )
