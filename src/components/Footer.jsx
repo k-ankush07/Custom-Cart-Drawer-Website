@@ -36,7 +36,7 @@ export default function Footer() {
           <nav className="mt-[20px] flex flex-wrap items-center justify-center gap-x-10 gap-y-3 max-[540px]:text-[16px] text-[18px]">
             <Link to="/" onClick={scrollToTop} className="text-gray-200 transition-colors hover:text-white">Home</Link>
             <Link to="/about" onClick={scrollToTop} className="text-gray-200 transition-colors hover:text-white">About Us</Link>
-            <Link to="/casestudie" onClick={scrollToTop} className="text-gray-200 transition-colors hover:text-white">Case Studies</Link>
+            {/* <Link to="/casestudie" onClick={scrollToTop} className="text-gray-200 transition-colors hover:text-white">Case Studies</Link> */}
             <Link to="/blog" onClick={scrollToTop} className="text-gray-200 transition-colors hover:text-white">Blog</Link>
             <Link to="/contact" onClick={scrollToTop} className="text-gray-200 transition-colors hover:text-white">Contact Us</Link>
             <Link to="/pricing" onClick={scrollToTop} className="text-gray-200 transition-colors hover:text-white">Pricing</Link>
