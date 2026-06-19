@@ -4,6 +4,7 @@ import PricingSection from '../sections/home/Pricing'
 import EverythingPlan from '../sections/Pricing/EverythingPlanS'
 import FAQ from '../sections/home/FAQ'
 import CTA from '../sections/home/CTA'
+import SEO from '../components/SEO'
 
 const pricingFaqs = [
   {
@@ -31,6 +32,11 @@ const pricingFaqs = [
 export default function Pricing() {
   return (
     <div>
+      <SEO
+        title="CartPlus Pricing – Affordable Shopify Cart Drawer"
+        description="Choose the perfect CartPlus plan for your Shopify store and unlock advanced cart drawer features that help increase conversions and average order value."
+        url="https://hubsyntax.com/pricing"
+      />
       <BannerSection
         heading='Build to Turn More Carts Into Sales'
         paragraph='We created HubCart after seeing thousands of Shopify stores lose sales because of outdated cart experiences. Our goal is simple help merchants increase conversions, drive more upsells, and boost average order value with a faster, smarter cart experience.'

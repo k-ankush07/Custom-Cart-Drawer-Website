@@ -6,10 +6,16 @@ import OurMission from '../sections/About/OurMission'
 import DrawerDesigned from '../sections/About/DrawerDesigned'
 import CartRevenue from '../sections/About/CartRevenue'
 import CTA from '../sections/home/CTA'
+import SEO from '../components/SEO'
 
 export default function About() {
   return (
     <div>
+      <SEO
+        title="About CartPlus – Shopify Cart Optimization Experts"
+        description="CartPlus empowers Shopify merchants with high-converting cart drawer experiences designed to drive revenue, customer engagement, and long-term growth."
+        url="https://hubsyntax.com/about-us"
+      />
       <BannerSection
         heading='Built for merchants who want to turn more carts into revenue.'
         paragraph='We built HubCart to help Shopify merchants turn more carts into revenue with a smoother, more modern shopping experience. Our goal is simple: increase conversions, raise average order value, and make checkout feel effortless for every customer.'
