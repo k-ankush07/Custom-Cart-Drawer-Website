@@ -25,7 +25,7 @@ const stats = [
 export default function RevenueGrowth() {
     return (
         <section>
-             <Container className='py-[40px] max-[540px]:py-[25px]'>
+             <Container className='py-[40px] max-[540px]:py-[25px] relative'>
                <h2 className='font-bold  max-[540px]:text-[35px] text-[45px] lg:text-[50px] leading-[45px] lg:leading-[60px] max-[540px]:mb-[15px] mb-[20px] text-center'>
                     Scalable Revenue Growth
                 </h2>

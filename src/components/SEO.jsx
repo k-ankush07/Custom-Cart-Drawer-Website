@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 
 export default function SEO({ title, description, url }) {
+  
   return (
     <Helmet>
       <title>{title}</title>
