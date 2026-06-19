@@ -491,7 +491,7 @@ export const blogPosts = [
   {
     id: 3,
     date: "May 25, 2026",
-    title: "Proven Ways Cart Plus Increases Your Store's Average Order Value",
+    title: "10 Proven Ways Cart Plus Increases Your Store's Average Order Value",
     desc: "Average Order Value (AOV) is one of the most important metrics in e-commerce because it measures how much customers spend per transaction. While many businesses focus heavily on acquiring new customers, increasing AOV allows you to generate more revenue from your existing traffic. Cart Plus is designed to help merchants maximize every purchase opportunity by strategically presenting relevant offers, incentives, and recommendations throughout the shopping journey.",
     img: "https://hubsyntax.com/cart-images/Rectangle 240648321.svg",
     content: [
