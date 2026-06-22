@@ -113,8 +113,8 @@ export default function Features() {
 
           <div className='w-full'>
             <img
-              src='https://hubsyntax.com/cart-images/cartFeatures.png'
-              alt='HubCart features'
+              src='https://cartplus.io/cartplus-img/Group 1707480297.svg'
+              alt='Cart Plus features'
               loading='lazy'
               decoding='async'
               className='w-full h-auto'

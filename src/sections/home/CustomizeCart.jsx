@@ -30,7 +30,7 @@ export default function CustomizeCart() {
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[60px] items-center px-[0] md:px-[20px] lg:px-[90px]'>
                     <div className='w-full max-[390px]:max-w-[100%] max-[430px]:max-w-[90%] max-[540px]:max-w-[80%] max-w-[60%] mx-auto md:max-w-[80%]'>
                         <img
-                            src='https://hubsyntax.com/cart-images/custmiseCart.png'
+                            src='https://cartplus.io/cartplus-img/Group 1707480027.svg'
                             alt='HubCart'
                             loading='lazy'
                             decoding='async'
@@ -46,14 +46,14 @@ export default function CustomizeCart() {
                             </div>
                         ))}
                         <div>
-                            <Button icon="https://hubsyntax.com/cart-images/buttonIcon.png">Start Free Trial</Button>
+                            <Button icon="https://cartplus.io/cartplus-img/buttonIcon.png">Start Free Trial</Button>
                         </div>
                     </div>
                 </div>
             </Container>
-            <div className='absolute right-0 top-70 z-0 hidden lg:block'>
+            {/* <div className='absolute right-0 top-70 z-0 hidden lg:block'>
                 <img src="https://hubsyntax.com/cart-images/Mask group (12).svg" alt="" loading="lazy" decoding="async" />
-            </div>
+            </div> */}
         </section>
     )
 }

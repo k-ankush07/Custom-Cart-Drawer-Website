@@ -30,9 +30,9 @@ export default function BannerSection({heading, paragraph, buttonText, img}) {
                     </div>
                 </div>
             </Container>
-            <div className='absolute right-0 top-0 hidden lg:block'>
+            {/* <div className='absolute right-0 top-0 hidden lg:block'>
                 <img src="https://hubsyntax.com/cart-images/Mask group (111).svg" alt="" loading="lazy" decoding="async" />
-            </div>
+            </div> */}
         </section>
     )
 }
