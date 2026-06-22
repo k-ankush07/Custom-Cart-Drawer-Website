@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Container from '../../components/Container'
-import Button from '../../components/Button'
 
 const plans = [
   {
@@ -83,7 +82,7 @@ const plans = [
 const badgeIdleClass = {
   1: '',
   2: 'bg-[#9D70CC] text-[#ffffff]',
-  3: 'bg-[#9D70CC] text-[#ffffff]',
+  3: 'bg-[#F1DDFF] text-[#00000]',
   4: 'bg-[#FF6B00] text-[#ffffff]',
 }
 
@@ -114,17 +113,30 @@ export default function Pricing({ showGradient }) {
                   onMouseEnter={() => setHoveredId(plan.id)}
                   onMouseLeave={() => setHoveredId(null)}
                   className={`relative rounded-[10px] py-[15px] lg:py-[30px] px-[15px] lg:px-[20px] flex flex-col justify-between
-                    border transition-all duration-300 ease-out
-                    ${isActive
-                      ? 'bg-[#512B6C] text-white border-transparent -mt-[20px] -mb-[20px] shadow-xl z-10'
-                      : 'bg-white text-[#1D1E20] border-gray-200'
+  transition-all duration-300 ease-out
+  ${isActive
+                      ? 'text-white -mt-[20px] -mb-[20px] z-10'
+                      : 'bg-white text-[#1D1E20]'
                     }`}
+                  style={
+                    isActive
+                      ? {
+                        background:
+                          'linear-gradient(180deg, #000000 0%, #9500FF 174.83%)',
+                        boxShadow: '6px 10px 25px 0px #B750FF4D',
+                      }
+                      : {
+                        border: '1px solid rgba(149, 0, 255, 0.2)',
+                        borderRadius: '10px',
+                        boxShadow: '0px 0px 220px 0px #9500FF14 inset',
+                      }
+                  }
                 >
                   {/* Badge */}
                   {plan.badge && (
                     <span
                       className={`absolute -top-[14px] text-[14px] font-semibold px-[16px] py-[4px] rounded-full whitespace-nowrap transition-colors duration-300
-                        ${isActive ? 'bg-white text-black' : (badgeIdleClass[plan.id] || 'bg-[#1D1E20] text-white')}`}
+                        ${isActive ? 'bg-[#9500FF] text-white' : (badgeIdleClass[plan.id] || 'bg-[#1D1E20] text-white')}`}
                     >
                       {plan.badge}
                     </span>
@@ -132,7 +144,7 @@ export default function Pricing({ showGradient }) {
 
                   {/* Top Content */}
                   <div>
-                    <h3 className='text-[20px] font-bold mb-[10px]'>{plan.name}</h3>
+                    <h3 className='text-[20px] font-bold '>{plan.name}</h3>
                     <p className={`text-[12px] mb-[20px] transition-colors duration-300 ${isActive ? 'text-white/70' : 'text-[#000000]'}`}>
                       {plan.subtitle}
                     </p>
@@ -157,7 +169,7 @@ export default function Pricing({ showGradient }) {
                       {plan.features.map((feature, index) => (
                         <li key={index} className='flex items-center gap-[10px] text-[12px]'>
                           <img
-                            src={isActive ? 'https://hubsyntax.com/cart-images/whiteCheck.png' : 'https://hubsyntax.com/cart-images/blackCheck.png'}
+                            src={isActive ? 'https://cartplus.io/cartplus-img/Vector (3).svg' : 'https://cartplus.io/cartplus-img/Vector (4).svg'}
                             alt='check'
                             loading='lazy'
                             decoding='async'
@@ -171,9 +183,24 @@ export default function Pricing({ showGradient }) {
                   </div>
 
                   {/* CTA pinned to bottom */}
-                  <Button className='w-full transition-all justify-center'>
-                    {plan.cta}
-                  </Button>
+                  <button
+                    className='w-full relative cursor-pointer border-none bg-transparent p-0'
+                  >
+                    <img
+                      src={isActive
+                        ? 'https://cartplus.io/cartplus-img/Frame 2121452755.svg'
+                        : 'https://cartplus.io/cartplus-img/Frame 29.svg'
+                      }
+                      alt=''
+                      className='w-full h-[56px] object-fill'
+                      loading='lazy'
+                      decoding='async'
+                    />
+                    <span className={`absolute inset-0 flex items-center justify-center text-[18px] font-semibold
+    ${isActive ? 'text-white' : 'text-[#1D1E20]'}`}>
+                      {plan.cta}
+                    </span>
+                  </button>
                 </div>
               )
             })}
