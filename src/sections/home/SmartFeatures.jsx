@@ -33,7 +33,7 @@ const features = [
 ]
 
 export default function Features() {
-  const [activeIndex, setActiveIndex] = useState(0) 
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index)
@@ -41,7 +41,10 @@ export default function Features() {
 
   return (
     <section className='py-[40px] max-[540px]:py-[25px]  relative'>
-      <Container>
+      <div className='absolute right-0 top-[-150px] z-0 hidden lg:block'>
+        <img src="https://cartplus.io/cartplus-img/Subtract (1).svg" alt="cart plus" className='w-full' />
+      </div>
+      <Container className='relative'>
         <div className='text-center'>
           <h2 className='font-semibold max-[540px]:text-[35px] text-[45px] lg:text-[55px] max-[540px]:leading-[45px] leading-[60px]'>
             Why Merchants Choose HubCart

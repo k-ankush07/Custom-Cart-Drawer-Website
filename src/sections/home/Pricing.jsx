@@ -209,12 +209,9 @@ export default function Pricing({ showGradient }) {
       </Container>
       {showGradient && (
         <>
-          {/* <div className='absolute z-0 top-100 left-0 hidden xl:block'>
-            <img src="https://hubsyntax.com/cart-images/Mask group (20).svg" alt="" loading="lazy" decoding="async" />
+          <div className='absolute z-0 top-50 left-0 hidden xl:block'>
+            <img src="https://cartplus.io/cartplus-img/Subtract (5).svg" alt="" loading="lazy" decoding="async" />
           </div>
-          <div className='absolute z-0 top-50 right-0 hidden xl:block'>
-            <img src="https://hubsyntax.com/cart-images/Mask group (21).svg" alt="" loading="lazy" decoding="async" />
-          </div> */}
         </>)}
     </section>
   )

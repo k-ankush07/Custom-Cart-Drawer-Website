@@ -3,29 +3,32 @@ import Container from '../../components/Container'
 import Button from '../../components/Button'
 
 const steps = [
-  {
-    id: 1,
-    title: 'Customize Your Cart',
-    description:
-      'Build a branded cart experience with rewards, progress bars, and checkout features that fit your store.',
-  },
-  {
-    id: 2,
-    title: 'Add Smart Upsells to Your Cart',
-    description:
-      'Show personalized upsells, bundles, and product recommendations right in the cart to help increase order value.',
-  },
-  {
-    id: 3,
-    title: 'Increase Revenue Automatically',
-    description:
-      'Drive more conversions with a faster, optimized checkout experience that helps turn more carts into completed purchases.',
-  },
+    {
+        id: 1,
+        title: 'Customize Your Cart',
+        description:
+            'Build a branded cart experience with rewards, progress bars, and checkout features that fit your store.',
+    },
+    {
+        id: 2,
+        title: 'Add Smart Upsells to Your Cart',
+        description:
+            'Show personalized upsells, bundles, and product recommendations right in the cart to help increase order value.',
+    },
+    {
+        id: 3,
+        title: 'Increase Revenue Automatically',
+        description:
+            'Drive more conversions with a faster, optimized checkout experience that helps turn more carts into completed purchases.',
+    },
 ];
 
 export default function CustomizeCart() {
     return (
         <section className='relative'>
+            <div className='absolute left-0 top-0 z-0 hidden lg:block'>
+                <img src="https://cartplus.io/cartplus-img/Subtract (3).svg" alt="cart plus" className='w-full' />
+            </div>
             <Container className='py-[40px] max-[540px]:py-[25px] relative z-10'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[60px] items-center px-[0] md:px-[20px] lg:px-[90px]'>
                     <div className='w-full max-[390px]:max-w-[100%] max-[430px]:max-w-[90%] max-[540px]:max-w-[80%] max-w-[60%] mx-auto md:max-w-[80%]'>
@@ -51,9 +54,7 @@ export default function CustomizeCart() {
                     </div>
                 </div>
             </Container>
-            {/* <div className='absolute right-0 top-70 z-0 hidden lg:block'>
-                <img src="https://hubsyntax.com/cart-images/Mask group (12).svg" alt="" loading="lazy" decoding="async" />
-            </div> */}
+           
         </section>
     )
 }

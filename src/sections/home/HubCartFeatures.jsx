@@ -55,9 +55,9 @@ export default function HubCartFeatures() {
 
     return (
         <section className='relative'>
-            {/* <div className='absolute z-0 hidden xl:block'>
-                <img src="https://hubsyntax.com/cart-images/Mask group (14).svg" alt="" loading="lazy" decoding="async" />
-            </div> */}
+            <div className='absolute z-0 top-0 right-0  hidden xl:block'>
+                <img src="https://cartplus.io/cartplus-img/Group 1707480314.svg" alt="" loading="lazy" decoding="async" />
+            </div>
 
             <Container className='relative z-10 py-[40px] max-[540px]:py-[25px]'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-[40px] lg:gap-[80px] items-center'>
