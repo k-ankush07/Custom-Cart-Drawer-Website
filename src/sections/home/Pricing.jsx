@@ -103,7 +103,7 @@ export default function Pricing({ showGradient }) {
             </p>
           </div>
 
-          <div className='grid max-[768px]:grid-cols-1 max-[840px]:grid-cols-2 grid-cols-4 gap-[50px] md:gap-[15px] lg:gap-[30px] items-stretch max-[540px]:pt-[0] pt-[20px]'>
+          <div className='grid max-[768px]:grid-cols-1 max-[840px]:grid-cols-2 grid-cols-4 gap-[50px] md:gap-[50px] lg:gap-[30px] items-stretch max-[540px]:pt-[0] pt-[20px] px-[0] md:px-[40px]'>
             {plans.map((plan) => {
               const isActive = hoveredId ? hoveredId === plan.id : plan.id === DEFAULT_ACTIVE_ID
 
@@ -209,12 +209,12 @@ export default function Pricing({ showGradient }) {
       </Container>
       {showGradient && (
         <>
-          <div className='absolute z-0 top-100 left-0 hidden xl:block'>
+          {/* <div className='absolute z-0 top-100 left-0 hidden xl:block'>
             <img src="https://hubsyntax.com/cart-images/Mask group (20).svg" alt="" loading="lazy" decoding="async" />
           </div>
           <div className='absolute z-0 top-50 right-0 hidden xl:block'>
             <img src="https://hubsyntax.com/cart-images/Mask group (21).svg" alt="" loading="lazy" decoding="async" />
-          </div>
+          </div> */}
         </>)}
     </section>
   )
