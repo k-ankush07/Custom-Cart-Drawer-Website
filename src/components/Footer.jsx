@@ -11,12 +11,12 @@ export default function Footer() {
 
   return (
     <footer className="relative">
-      <div className='absolute z-0 bottom-0 left-0'>
+      {/* <div className='absolute z-0 bottom-0 left-0'>
         <img src="https://hubsyntax.com/cart-images/Mask group (22).svg" alt="" loading="lazy" decoding="async" />
       </div>
       <div className='absolute z-0 bottom-0 right-0'>
         <img src="https://hubsyntax.com/cart-images/Mask group (23).svg" alt="" loading="lazy" decoding="async" />
-      </div>
+      </div> */}
       <Container className='relative pt-[40px] max-[540px]:pt-[25px]'>
         <div className="flex flex-col items-center text-center">
           <Link to="/" onClick={scrollToTop} className="flex items-center">

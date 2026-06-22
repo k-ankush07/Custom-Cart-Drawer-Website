@@ -17,10 +17,8 @@ export default function CTA() {
             optimization built for modern Shopify brands.
           </p>
           <div className="mt-[20px] max-[430px]:block  flex items-center justify-center gap-4">
-            <Button className='max-[430px]:mb-[20px]' icon="https://hubsyntax.com/cart-images/buttonIcon.png">Start Free Trial</Button>
-            <Button icon="https://hubsyntax.com/cart-images/aarowCart.png" variant="ghost" className="text-white hover:bg-white/10">
-              Book a Demo
-            </Button>
+            <Button className='max-[430px]:mb-[20px]' variant="pill" icon="https://hubsyntax.com/cart-images/buttonIcon.png">Start Free Trial</Button>
+         
           </div>
         </div>
       </Container>

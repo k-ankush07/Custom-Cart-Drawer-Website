@@ -3,16 +3,16 @@ import Container from '../../components/Container'
 
 const faqs = [
   {
-    q: 'What is HubCart?',
-    a: 'HubCart is designed to help Shopify brands increase sales with smarter upsells, rewards, and a better checkout experience.',
+    q: 'What is Cart Plus?',
+    a: 'Cart Plus is designed to help Shopify brands increase sales with smarter upsells, rewards, and a better checkout experience.',
   },
   {
-    q: 'Does HubCart increase the average order value?',
-    a: 'Yes. HubCart helps merchants increase average order value through strategic upsells, cross-sells, rewards, and cart incentives that encourage customers to purchase more.',
+    q: 'Does Cart Plus increase the average order value?',
+    a: 'Yes. Cart Plus helps merchants increase average order value through strategic upsells, cross-sells, rewards, and cart incentives that encourage customers to purchase more.',
   },
   {
-    q: 'How does HubCart increase average order value?',
-    a: 'HubCart helps increase average order value through strategic upsells, cross-sells, and reward-based incentives that encourage customers to add more to their purchase.',
+    q: 'How does Cart Plus increase average order value?',
+    a: 'Cart Plus helps increase average order value through strategic upsells, cross-sells, and reward-based incentives that encourage customers to add more to their purchase.',
   },
   {
     q: 'Can I customize the cart drawer design?',
@@ -23,8 +23,8 @@ const faqs = [
     a: 'You can create product recommendations, frequently bought together offers, free gift promotions, and cart-based incentives designed to drive additional sales.',
   },
   {
-    q: 'Do I need coding experience to use HubCart?',
-    a: 'No. HubCart is designed to be simple and intuitive, so you can get up and running without any coding experience. If you need more advanced functionality, developers have the flexibility to customize it further.',
+    q: 'Do I need coding experience to use Cart Plus?',
+    a: 'No. Cart Plus is designed to be simple and intuitive, so you can get up and running without any coding experience. If you need more advanced functionality, developers have the flexibility to customize it further.',
   },
 ];
 
@@ -50,7 +50,7 @@ export default function FAQ({ faqs: faqsProp = faqs }) {
               return (
                 <div
                   key={i}
-                  className="rounded-xl border border-gray-200 bg-white "
+                  className="rounded-[15px] border border-[#D9D9D9] bg-white "
                 >
                   <button
                     type="button"
