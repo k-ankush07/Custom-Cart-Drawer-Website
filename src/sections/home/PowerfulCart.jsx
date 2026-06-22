@@ -12,7 +12,7 @@ const cards = [
     },
     {
         id: 2,
-        image: 'https://cartplus.io/cartplus-img/Group 1707480044.svg',
+        image: 'https://cartplus.io/cartplus-img/Group 1707480044 (1).svg',
         title: 'Personalized Upsell Offers',
         description:
             'Increase AOV with smart upsells, bundles, and timely product recommendations.',
