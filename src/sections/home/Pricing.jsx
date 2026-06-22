@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Container from '../../components/Container'
 
 const plans = [
@@ -88,7 +88,19 @@ const badgeIdleClass = {
 
 export default function Pricing({ showGradient }) {
   const [hoveredId, setHoveredId] = useState(null)
+  const leaveTimer = useRef(null)
   const DEFAULT_ACTIVE_ID = 2
+
+  const handleMouseEnter = (id) => {
+    clearTimeout(leaveTimer.current)
+    setHoveredId(id)
+  }
+
+  const handleMouseLeave = () => {
+    leaveTimer.current = setTimeout(() => {
+      setHoveredId(null)
+    }, 80)
+  }
 
   return (
     <section className='relative'>
@@ -110,11 +122,11 @@ export default function Pricing({ showGradient }) {
               return (
                 <div
                   key={plan.id}
-                  onMouseEnter={() => setHoveredId(plan.id)}
-                  onMouseLeave={() => setHoveredId(null)}
+                  onMouseEnter={() => handleMouseEnter(plan.id)}
+                  onMouseLeave={handleMouseLeave}
                   className={`relative rounded-[10px] py-[15px] lg:py-[30px] px-[15px] lg:px-[20px] flex flex-col justify-between
-  transition-all duration-300 ease-out
-  ${isActive
+                    transition-all duration-300 ease-out
+                    ${isActive
                       ? 'text-white -mt-[20px] -mb-[20px] z-10'
                       : 'bg-white text-[#1D1E20]'
                     }`}
@@ -144,7 +156,7 @@ export default function Pricing({ showGradient }) {
 
                   {/* Top Content */}
                   <div>
-                    <h3 className='text-[20px] font-bold '>{plan.name}</h3>
+                    <h3 className='text-[20px] font-bold'>{plan.name}</h3>
                     <p className={`text-[12px] mb-[20px] transition-colors duration-300 ${isActive ? 'text-white/70' : 'text-[#000000]'}`}>
                       {plan.subtitle}
                     </p>
@@ -197,7 +209,7 @@ export default function Pricing({ showGradient }) {
                       decoding='async'
                     />
                     <span className={`absolute inset-0 flex items-center justify-center text-[18px] font-semibold
-    ${isActive ? 'text-white' : 'text-[#1D1E20]'}`}>
+                      ${isActive ? 'text-white' : 'text-[#1D1E20]'}`}>
                       {plan.cta}
                     </span>
                   </button>
@@ -212,7 +224,8 @@ export default function Pricing({ showGradient }) {
           <div className='absolute z-0 top-50 left-0 hidden xl:block'>
             <img src="https://cartplus.io/cartplus-img/Subtract (5).svg" alt="" loading="lazy" decoding="async" />
           </div>
-        </>)}
+        </>
+      )}
     </section>
   )
 }

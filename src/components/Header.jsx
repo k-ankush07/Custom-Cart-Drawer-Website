@@ -24,7 +24,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="https://cartplus.io/cartplus-img/websiteLogo.png"
+              src="https://cartplus.io/cartplus-img/CartLogo.svg"
               alt="CartPlus"
               className="h-[51px] w-auto"
             />
@@ -75,7 +75,7 @@ export default function Header() {
           {/* Centered Logo */}
           <Link to="/">
             <img
-              src="https://cartplus.io/cartplus-img/websiteLogo.png"
+              src="https://cartplus.io/cartplus-img/CartLogo.svg"
               alt="CartPlus"
               className="h-[36px] w-auto"
             />
