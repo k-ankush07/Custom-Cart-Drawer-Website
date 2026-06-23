@@ -14,8 +14,8 @@ export default function TopHeading({ heading, paragraph, showGradient }) {
                     </p>
                 </div>
             </Container>
-            {showGradient && (<div className='absolute z-0 top-0 right-0 hidden xl:block'>
-                <img src="https://hubsyntax.com/cart-images/contactbg.svg" alt="" loading="lazy" decoding="async" />
+            {showGradient && (<div className='absolute z-0 top-0 left-0 hidden xl:block'>
+                <img src="https://cartplus.io/cartplus-img/Subtract (8).svg" alt="" loading="lazy" decoding="async" />
             </div>)}
         </section>
     )

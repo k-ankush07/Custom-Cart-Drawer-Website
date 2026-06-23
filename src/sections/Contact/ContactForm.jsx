@@ -4,13 +4,13 @@ import Button from '../../components/Button'
 
 // ── icon URLs ──────────────────────────────────────────────────────────────
 const ICONS = {
-  phone: 'https://hubsyntax.com/cart-images/CartPhone.svg',
-  mail: 'https://hubsyntax.com/cart-images/Cartmail-check.svg',
-  location: 'https://hubsyntax.com/cart-images/Cartlocation_on.svg',
-  linkedin: 'https://hubsyntax.com/cart-images/cib_linkedin-in.svg',
-  facebook: 'https://hubsyntax.com/cart-images/cib_facebook-f.svg',
-  twitter: 'https://hubsyntax.com/cart-images/cib_twitter-t.svg',
-  instagram: 'https://hubsyntax.com/cart-images/cib_instagram-i.svg',
+  phone: 'https://cartplus.io/cartplus-img/Phone.svg',
+  mail: 'https://cartplus.io/cartplus-img/Group 1707480320.svg',
+  location: 'https://cartplus.io/cartplus-img/location_on.svg',
+  linkedin: 'https://cartplus.io/cartplus-img/cib_linkedin-in.svg',
+  facebook: 'https://cartplus.io/cartplus-img/Vector%20(6).svg',
+  twitter: 'https://cartplus.io/cartplus-img/akar-icons_twitter-fill.svg',
+  instagram: 'https://cartplus.io/cartplus-img/ri_instagram-fill.svg',
 }
 
 const SOCIAL = [
@@ -81,7 +81,7 @@ export default function ContactForm() {
                       <img src={ICONS[icon]} alt={label} className="h-[15px] sm:h-[25px] w-[15px] sm:w-[25px]" />
                     </span>
                     <div>
-                      <p className="text-[15px] sm:text-[18px] font-semibold text-white">{label}</p>
+                      <p className="text-[15px] sm:text-[18px] font-semibold ">{label}</p>
                       <p className="mt-0.5 text-[15px] sm:text-[18px]">{value}</p>
                     </div>
                   </li>
@@ -90,16 +90,19 @@ export default function ContactForm() {
 
               {/* social */}
               <div className='mt-[-5px] sm:mt-[-20px]'>
-                <p className="mb-[10px] sm:mb-[20px] text-[20px] font-bold uppercase tracking-widest">
+                {/* <p className="mb-[10px] sm:mb-[20px] text-[20px] font-bold uppercase tracking-widest">
                   Follow Us
-                </p>
-                <div className="flex gap-3">
+                </p> */}
+                <div className="flex gap-3 mt-[10px]">
                   {SOCIAL.map(({ key, href, label }) => (
                     <a
                       key={key}
                       href={href}
                       aria-label={label}
-                      className="flex h-[30px] sm:h-[50px] w-[30px] sm:w-[50px] items-center justify-center rounded-full border bg-white "
+                      className="flex h-[30px] sm:h-[50px] w-[30px] sm:w-[50px] items-center justify-center rounded-full border "
+                      style={{
+                        background: 'linear-gradient(180deg, #000000 0%, #9500FF 174.83%)',
+                      }}
                     >
                       <img src={ICONS[key]} alt={label} className="h-[15px] sm:h-[24px] w-[15px] sm:w-[24px]" />
                     </a>
@@ -110,43 +113,59 @@ export default function ContactForm() {
 
             {/* ── RIGHT: form ──────────────────────────────────── */}
             <form onSubmit={handleSend} className="flex flex-col gap-4">
+
               {/* First / Last name row */}
               <div className="grid max-[430px]:grid-cols-1 grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  value={form.firstName}
-                  onChange={set('firstName')}
-                  className="rounded-[10px] border border-white/20 bg-white/5 py-2 px-4 sm:py-3 text-[16px] text-white outline-none transition focus:border-white/50 focus:bg-white/10"
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  value={form.lastName}
-                  onChange={set('lastName')}
-                  className="rounded-[10px] border border-white/20 bg-white/5 py-2 px-4 sm:py-3 text-[16px] text-white outline-none transition focus:border-white/50 focus:bg-white/10"
-                />
+                {['firstName', 'lastName'].map((field) => (
+                  <div key={field} className="relative rounded-[10px]" style={{
+                    padding: '1px',
+                    background: 'linear-gradient(268.89deg, rgba(149,0,255,0.2) 0.28%, rgba(255,255,255,0.2) 99.72%)',
+                  }}>
+                    <input
+                      type="text"
+                      placeholder={field === 'firstName' ? 'First Name' : 'Last Name'}
+                      value={form[field]}
+                      onChange={set(field)}
+                      className="w-full rounded-[10px] py-2 px-4 sm:py-3 text-[16px] text-white outline-none transition focus:bg-[#f0e4ff]"
+                      style={{ background: '#F9F1FF', color: '#000' }}
+                    />
+                  </div>
+                ))}
               </div>
 
               {/* Phone */}
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                value={form.phone}
-                onChange={set('phone')}
-                className="rounded-[10px] border border-white/20 bg-white/5 py-2 px-4 sm:py-3 text-[16px] text-white outline-none transition focus:border-white/50 focus:bg-white/10"
-              />
+              <div className="relative rounded-[10px]" style={{
+                padding: '1px',
+                background: 'linear-gradient(268.89deg, rgba(149,0,255,0.2) 0.28%, rgba(255,255,255,0.2) 99.72%)',
+              }}>
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  value={form.phone}
+                  onChange={set('phone')}
+                  className="w-full rounded-[10px] py-2 px-4 sm:py-3 text-[16px] outline-none transition focus:bg-[#f0e4ff]"
+                  style={{ background: '#F9F1FF', color: '#000' }}
+                />
+              </div>
 
-              {/* Address / message */}
-              <textarea
-                rows={7}
-                placeholder="Address"
-                value={form.address}
-                onChange={set('address')}
-                className="resize-none rounded-[10px] border border-white/20 bg-white/5 py-2 px-4 sm:py-3 text-[16px] text-white outline-none transition focus:border-white/50 focus:bg-white/10 h-[120px] sm:h-[196px]"
-              />
+              {/* Address */}
+              <div className="relative rounded-[10px]" style={{
+                padding: '1px',
+                background: 'linear-gradient(268.89deg, rgba(149,0,255,0.2) 0.28%, rgba(255,255,255,0.2) 99.72%)',
+                lineHeight: 0,
+                display: 'block',
+              }}>
+                <textarea
+                  rows={7}
+                  placeholder="Address"
+                  value={form.address}
+                  onChange={set('address')}
+                  className="resize-none w-full rounded-[10px] py-2 px-4 sm:py-3 text-[16px] outline-none transition focus:bg-[#f0e4ff] h-[120px] sm:h-[196px]"
+                  style={{ background: '#F9F1FF', color: '#000', display: 'block', lineHeight: '1.5' }}
+                />
+              </div>
 
-              <Button variant='pill' type="submit">Send</Button>
+              <Button className='text-center justify-center' type="submit">Send</Button>
             </form>
           </div>
         </div>

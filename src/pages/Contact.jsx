@@ -20,7 +20,7 @@ export default function Contact() {
         showGradient
       />
       <ContactForm />
-      <Map />
+      {/* <Map /> */}
       <CTA />
     </div>
   )
