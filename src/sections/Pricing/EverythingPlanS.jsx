@@ -1,49 +1,53 @@
+
+
+
 import React from 'react'
 import Container from '../../components/Container'
 
+const plans = [
+    { key: 'free', name: 'Free', price: '$0.00', period: '/lifetime' },
+    { key: 'starter', name: 'Starter', price: '$4.99', period: '/lifetime' },
+    { key: 'scale', name: 'Scale', price: '$9.99', period: '/lifetime' },
+    { key: 'advance', name: 'Advanced', price: '$14.99', period: '/lifetime' },
+]
+
 const features = [
-    { name: 'Monthly Order', free: 'Dev & Partner Only', pro: 200, scale: 500, advance: 1000 },
-    { name: '14-day free trial', free: false, pro: true, scale: true, advance: true },
-    { name: 'Design settings', free: false, pro: true, scale: true, advance: true },
-    { name: 'Announcements module', free: false, pro: true, scale: true, advance: true },
-    { name: 'Upsells & cross-sells', free: false, pro: true, scale: true, advance: true },
-    { name: 'Reward progress bar', free: false, pro: true, scale: true, advance: true },
-    { name: 'Mobile Optimization', free: false, pro: true, scale: true, advance: true },
-    { name: 'Add-ons module', free: false, pro: true, scale: true, advance: true },
-    { name: 'Custom HTML & CSS', free: false, pro: true, scale: true, advance: true },
+    { name: 'Monthly Order', free: 'Dev & Partner Only', starter: '200', scale: '500', advance: '1000' },
+    { name: '14-day free trial', free: false, starter: true, scale: true, advance: true },
+    { name: 'Design settings', free: false, starter: true, scale: true, advance: true },
+    { name: 'Announcements module', free: false, starter: true, scale: true, advance: true },
+    { name: 'Upsells & cross-sells', free: false, starter: true, scale: true, advance: true },
+    { name: 'Reward progress bar', free: false, starter: true, scale: true, advance: true },
+    { name: 'Mobile Optimization', free: false, starter: true, scale: true, advance: true },
+    { name: 'Add-ons module', free: false, starter: true, scale: true, advance: true },
+    { name: 'Custom HTML & CSS', free: false, starter: true, scale: true, advance: true },
 ]
 
 const CHECK = 'https://hubsyntax.com/cart-images/checkSign.svg'
 const CROSS = 'https://cartplus.io/cartplus-img/Frame 2121452953.svg'
-const checkBlack = 'https://cartplus.io/cartplus-img/Frame 2121452922.svg'
+const checkBlack = 'https://cartplus.io/cartplus-img/Frame 2121452957.svg'
 
-function Icon({ value }) {
-    return (
-        <img
-            src={value ? CHECK : CROSS}
-            alt={value ? 'Included' : 'Not included'}
-            width={25}
-            height={25}
-            className="mx-auto w-[25px] h-[20px] lg:w-[20px] lg:h-[25px]"
-        />
-    )
-}
-
-// Renders a string/number as text, or falls back to the check/cross icon for booleans
-function Cell({ value }) {
-    if (typeof value === 'string' || typeof value === 'number') {
+function Cell({ value, isStarter, isScale, isAdvance }) {
+    if (typeof value === 'string') {
         return (
-            <span className="text-white text-[14px] lg:text-[16px] font-medium">
+            <span className={`text-[14px] lg:text-[16px] font-medium ${isStarter ? 'text-white' : 'text-black'}`}>
                 {value}
             </span>
         )
     }
-    return <Icon value={value} />
+    if (value === true) {
+        const src = (isScale || isAdvance) ? checkBlack : CHECK
+        return <img src={src} alt="Included" width={25} height={25} className="mx-auto w-[25px] h-[25px]" />
+    }
+    return <img src={CROSS} alt="Not included" width={25} height={25} className="mx-auto w-[25px] h-[25px]" />
 }
 
 export default function EverythingPlan() {
     return (
         <section className='relative'>
+            <div className='absolute z-0 top-[-80%] right-0 hidden xl:block'>
+                <img src="https://cartplus.io/cartplus-img/Subtract (6).svg" alt="" loading="lazy" decoding="async" />
+            </div>
             <Container className='py-[40px] max-[540px]:py-[25px] relative z-10'>
 
                 {/* Heading */}
@@ -52,88 +56,76 @@ export default function EverythingPlan() {
                         See Everything Included In Each Plan
                     </h2>
                     <p className='max-[540px]:text-[16px] text-[18px] max-[540px]:leading-[22px] leading-[28px] mx-auto max-w-[950px]'>
-                        See Everything Included In Each Plan Compare features across all plans and choose the perfect cart
-                        drawer solution for your Shopify store.
+                        Compare features across all plans and choose the perfect cart drawer solution for your Shopify store.
                     </p>
                 </div>
 
-                {/* Table */}
+                {/* Grid */}
                 <div className='overflow-x-auto rounded-[12px] border border-[#4A4A4A]'>
-                    <table className='w-full border-collapse'>
-                        <thead>
-                            <tr>
-                                {/* Feature label col */}
-                                <th className='py-[15px] lg:py-[28px] px-[20px] lg:px-[38px] text-left text-[24px] tracking-widest font-semibold'>
-                                    From Feature
-                                </th>
+                    <div className='relative min-w-[700px]'>
+                        {/* Starter column background — single full-height div */}
+                        <div
+                            className='absolute top-0 bottom-0 z-0'
+                            style={{
+                                left: 'calc(100% / 5 * 2)',
+                                width: 'calc(100% / 5)',
+                                background: 'linear-gradient(180deg, #000000 0%, #9500FF 174.83%)',
+                                boxShadow: 'inset 0 0 0 1px rgba(222,175,255,0.5)',
+                                opacity: '80%'
+                            }}
+                        />
 
-                                {/* Free */}
-                                <th className='py-[15px] lg:py-[28px] px-[20px] lg:px-[38px] text-center'>
-                                    <p className=' font-bold text-[20px] lg:text-[25px] mb-1'>Free</p>
-                                    <p className=' font-[600] text-[25px] lg:text-[38px] leading-none flex items-end justify-center'>
-                                        $0.00{' '}
-                                        <span className='text-[14px] lg:text-[14px] lg:text-[20px] font-normal opacity-70'>/lifetime</span>
-                                    </p>
-                                </th>
-
-                                {/* Pro (highlighted) */}
-                                <th className='py-[15px] lg:py-[28px] px-[20px] lg:px-[38px] text-center bg-[#46285C]'>
-                                    <p className='text-white font-bold text-[20px] lg:text-[25px] mb-1'>Pro</p>
-                                    <p className='text-white font-[600] text-[25px] lg:text-[38px] leading-none flex items-end justify-center'>
-                                        $4.99{' '}
-                                        <span className='text-[14px] lg:text-[20px] font-normal opacity-70'>/lifetime</span>
-                                    </p>
-                                </th>
-
-                                {/* Scale */}
-                                <th className='py-[15px] lg:py-[28px] px-[20px] lg:px-[38px] text-center'>
-                                    <p className=' font-bold text-[20px] lg:text-[25px] mb-1'>Scale</p>
-                                    <p className=' font-[600] text-[25px] lg:text-[38px] leading-none flex items-end justify-center'>
-                                        $9.99{' '}
-                                        <span className='text-[14px] lg:text-[20px] font-normal opacity-70'>/lifetime</span>
-                                    </p>
-                                </th>
-
-                                {/* Advanced */}
-                                <th className='py-[15px] lg:py-[28px] px-[20px] lg:px-[38px] text-center'>
-                                    <p className=' font-bold text-[20px] lg:text-[25px] mb-1'>Advanced</p>
-                                    <p className=' font-[600] text-[25px] lg:text-[38px] leading-none flex items-end justify-center'>
-                                        $14.99{' '}
-                                        <span className='text-[14px] lg:text-[20px] font-normal opacity-70'>/lifetime</span>
-                                    </p>
-                                </th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            {features.map((feature) => (
-                                <tr
-                                    key={feature.name}
-                                    className='border-t border-[#4A4A4A]'
+                        {/* Header Row */}
+                        <div className='grid grid-cols-5 relative'>
+                            <div className='py-[15px] lg:py-[28px] px-[20px] lg:px-[20px] text-left text-[20px] lg:text-[24px] tracking-widest font-semibold border-b border-[#4A4A4A] z-10'>
+                                From Feature
+                            </div>
+                            {plans.map((plan) => (
+                                <div
+                                    key={plan.key}
+                                    className='py-[15px] lg:py-[28px] px-[20px] lg:px-[20px] text-center border-b border-[#4A4A4A] z-10'
                                 >
-                                    <td className='px-[20px] lg:px-[38px] py-[15px] lg:py-[20px]  text-[15px] lg:text-[20px] font-medium'>
-                                        {feature.name}
-                                    </td>
-                                    <td className='px-[20px] lg:px-[38px] py-[15px] lg:py-[20px] text-center'>
-                                        <Cell value={feature.free} />
-                                    </td>
-                                    <td className='px-[20px] lg:px-[38px] py-[15px] lg:py-[20px] text-center bg-[#46285C]'>
-                                        <Cell value={feature.pro} />
-                                    </td>
-                                    <td className='px-[20px] lg:px-[38px] py-[15px] lg:py-[20px] text-center'>
-                                        <Cell value={feature.scale} />
-                                    </td>
-                                    <td className='px-[20px] lg:px-[38px] py-[15px] lg:py-[20px] text-center'>
-                                        <Cell value={feature.advance} />
-                                    </td>
-                                </tr>
+                                    <p className={`font-bold text-[20px] lg:text-[25px] mb-1 ${plan.key === 'starter' ? 'text-white' : ''}`}>
+                                        {plan.name}
+                                    </p>
+                                    <p className={`font-[600] text-[25px] lg:text-[20px] leading-none flex items-end justify-center ${plan.key === 'starter' ? 'text-white' : ''}`}>
+                                        {plan.price}{' '}
+                                        <span className='text-[14px] lg:text-[20px] font-normal opacity-70'>{plan.period}</span>
+                                    </p>
+                                </div>
                             ))}
-                        </tbody>
-                    </table>
+                        </div>
+
+                        {/* Feature Rows */}
+                        {features.map((feature, i) => (
+                            <div
+                                key={feature.name}
+                                className={`grid grid-cols-5 relative ${i !== features.length - 1 ? 'border-b border-[#4A4A4A]' : ''}`}
+                            >
+                                <div className='px-[20px] lg:px-[20px] py-[15px] lg:py-[20px] text-[15px] lg:text-[20px] font-medium z-10'>
+                                    {feature.name}
+                                </div>
+                                {plans.map((plan) => (
+                                    <div
+                                        key={plan.key}
+                                        className='px-[20px] lg:px-[20px] py-[15px] lg:py-[20px] flex items-center justify-center z-10'
+                                    >
+                                        <Cell
+                                            value={feature[plan.key]}
+                                            isStarter={plan.key === 'starter'}
+                                            isScale={plan.key === 'scale'}
+                                            isAdvance={plan.key === 'advance'}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
                 </div>
+
             </Container>
-            <div className='absolute z-0 top-[-10%] right-0 hidden xl:block'>
-                <img src="" alt="" loading="lazy" decoding="async" />
+            <div className='absolute z-0 bottom-[-100%] left-0 hidden xl:block'>
+                <img src="https://cartplus.io/cartplus-img/Subtract (7).svg" alt="" loading="lazy" decoding="async" />
             </div>
         </section>
     )

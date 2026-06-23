@@ -37,7 +37,7 @@ export default function FAQ({ faqs: faqsProp = faqs }) {
   return (
     <section className='relative z-10'>
       <Container className="py-[40px] max-[540px]:py-[25px]">
-       <div className='px-[0] lg:px-[78px]'>
+       <div>
           <div className="text-center">
             <h2 className="font-bold max-[540px]:text-[35px] text-[45px] lg:text-[50px] leading-[45px] lg:leading-[60px]">
               Frequently asked questions
