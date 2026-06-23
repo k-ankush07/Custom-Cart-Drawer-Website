@@ -20,7 +20,7 @@ export default function OurMission({ img, heading, paragraph1, paragraph2, parag
                     </div>
 
                     {/* Right: Text Content */}
-                    <div className="w-full md:w-1/2 text-white">
+                    <div className="w-full md:w-1/2 ">
                         <h2 className="font-semibold max-[540px]:text-[35px] text-[45px] lg:text-[55px] max-[540px]:leading-[45px] leading-[60px]">
                             {heading}
                         </h2>
@@ -39,9 +39,6 @@ export default function OurMission({ img, heading, paragraph1, paragraph2, parag
                     </div>
                 </div>
             </Container>
-            <div className='absolute right-20 top-20 hidden lg:block'>
-                <img src={gradientImg} alt="" loading="lazy" decoding="async" />
-            </div>
         </section>
     )
 }
