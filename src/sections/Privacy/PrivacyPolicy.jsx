@@ -4,20 +4,23 @@ import Container from '../../components/Container'
 export default function PrivacyPolicy() {
     return (
         <section className="relative">
-            <Container className="relative z-10 py-[80px] max-[540px]:py-[50px] text-white">
-                <div className="max-w-[1000px] mx-auto">
+            <div className='absolute hidden lg:block'>
+                <img src="https://cartplus.io/cartplus-img/Group 1707480310.svg" alt="" loading="lazy" decoding="async" />
+            </div>
+            <Container className="relative z-10 py-[50px] max-[540px]:py-[30px] ">
+                <div>
 
                     {/* Page Heading */}
-                    <h1 className="font-bold text-[50px] max-[540px]:text-[34px] leading-[1.2] mb-[20px]">
-                        Privacy Policy for HubCart
+                    <h1 className="font-bold text-[50px] text-center max-[540px]:text-[34px] leading-[1.2] mb-[40px]">
+                        Privacy Policy for Cart Plus
                     </h1>
-                    <p className="text-[16px] leading-[26px] text-gray-300 mb-[40px]">
+                    <p className="text-[16px] leading-[26px] text-gray-600 mb-[20px]">
                         Last Updated: [Date]
                     </p>
 
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        This Privacy Policy describes how HubCart ("we," "our," or "us") collects,
-                        uses, and protects information when merchants install and use the HubCart
+                        This Privacy Policy describes how Cart Plus ("we," "our," or "us") collects,
+                        uses, and protects information when merchants install and use the Cart Plus
                         Shopify application ("App").
                     </p>
                     <p className="text-[16px] leading-[26px] mb-[40px]">
@@ -94,7 +97,7 @@ export default function PrivacyPolicy() {
                         Shopify Data
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        HubCart accesses Shopify store data only as necessary to provide the services
+                        Cart Plus accesses Shopify store data only as necessary to provide the services
                         requested by merchants.
                     </p>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
@@ -152,7 +155,7 @@ export default function PrivacyPolicy() {
                         App and comply with legal obligations.
                     </p>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        When a merchant uninstalls HubCart, we will delete or anonymize stored data
+                        When a merchant uninstalls Cart Plus, we will delete or anonymize stored data
                         within a reasonable period unless retention is required by law.
                     </p>
 
@@ -243,7 +246,7 @@ export default function PrivacyPolicy() {
                         please contact us:
                     </p>
                     <ul className="list-none text-[16px] leading-[26px] space-y-[8px]">
-                        <li>HubCart</li>
+                        <li>Cart Plus</li>
                         <li>Company Name:</li>
                         <li>Email:</li>
                         <li>Website:</li>
@@ -252,6 +255,12 @@ export default function PrivacyPolicy() {
 
                 </div>
             </Container>
+              <div className='absolute z-0 top-[20%] right-0 hidden xl:block'>
+                <img src="https://cartplus.io/cartplus-img/Subtract (6).svg" alt="" loading="lazy" decoding="async" />
+            </div>
+            <div className='absolute z-0 bottom-[0%] left-0 hidden xl:block'>
+                <img src="https://cartplus.io/cartplus-img/Subtract (7).svg" alt="" loading="lazy" decoding="async" />
+            </div>
         </section>
     )
 }

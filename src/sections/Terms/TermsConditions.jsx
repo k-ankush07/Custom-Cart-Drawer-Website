@@ -4,33 +4,36 @@ import Container from '../../components/Container'
 export default function TermsConditions() {
     return (
         <section className="relative">
-            <Container className="relative z-10 py-[80px] max-[540px]:py-[50px] text-white">
-                <div className="max-w-[1000px] mx-auto">
+            <div className='absolute hidden lg:block'>
+                <img src="https://cartplus.io/cartplus-img/Group 1707480310.svg" alt="" loading="lazy" decoding="async" />
+            </div>
+            <Container className="relative z-10 py-[50px] max-[540px]:py-[30px] ">
+                <div>
 
                     {/* Page Heading */}
-                    <h1 className="font-bold text-[50px] max-[540px]:text-[34px] leading-[1.2] mb-[20px]">
-                        Terms and Conditions for HubCart
+                    <h1 className="font-bold text-[50px] text-center max-[540px]:text-[34px] leading-[1.2] mb-[40px]">
+                        Terms and Conditions for Cart Plus
                     </h1>
-                    <p className="text-[16px] leading-[26px] text-gray-300 mb-[40px]">
+                    <p className="text-[16px] leading-[26px] text-gray-600 mb-[20px]">
                         Last Updated: [Date]
                     </p>
 
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        Welcome to HubCart. These Terms and Conditions ("Terms") govern your access
-                        to and use of the HubCart Shopify application ("App", "HubCart", "Service"),
+                        Welcome to Cart Plus. These Terms and Conditions ("Terms") govern your access
+                        to and use of the Cart Plus Shopify application ("App", "Cart Plus", "Service"),
                         provided by Company Name ("Company", "we", "our", or "us").
                     </p>
-                    <p className="text-[16px] leading-[26px] mb-[40px]">
-                        By installing, accessing, or using HubCart, you agree to be bound by these
+                    <p className="text-[16px] leading-[26px] mb-[20px]">
+                        By installing, accessing, or using Cart Plus, you agree to be bound by these
                         Terms. If you do not agree to these Terms, you must not install or use the App.
                     </p>
 
                     {/* 1. Description of Service */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Description of Service
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Description of Service
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        HubCart is a Shopify application that enables merchants to enhance their
+                        Cart Plus is a Shopify application that enables merchants to enhance their
                         online stores through customizable cart drawer functionality, cart upsells,
                         cart recommendations, cart announcements, and related e-commerce features.
                     </p>
@@ -40,10 +43,10 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 2. Eligibility */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Eligibility
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Eligibility
                     </h2>
-                    <p className="text-[16px] leading-[26px] mb-[16px]">To use HubCart, you must:</p>
+                    <p className="text-[16px] leading-[26px] mb-[16px]">To use Cart Plus, you must:</p>
                     <ul className="list-disc pl-[22px] text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
                         <li>Have a valid Shopify store.</li>
                         <li>Be authorized to install applications on the Shopify store.</li>
@@ -51,11 +54,11 @@ export default function TermsConditions() {
                     </ul>
 
                     {/* 3. Account and Store Access */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
                         Account and Store Access
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        By installing HubCart, you authorize us to access certain Shopify store
+                        By installing Cart Plus, you authorize us to access certain Shopify store
                         information necessary for providing the Service, including but not limited to:
                     </p>
                     <ul className="list-disc pl-[22px] text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
@@ -70,11 +73,11 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 4. Subscription and Billing */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                       Subscription and Billing
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Subscription and Billing
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        Certain features of HubCart may require a paid subscription. By subscribing,
+                        Certain features of Cart Plus may require a paid subscription. By subscribing,
                         you agree that:
                     </p>
                     <ul className="list-disc pl-[22px] text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
@@ -86,8 +89,8 @@ export default function TermsConditions() {
                     </ul>
 
                     {/* 5. Merchant Responsibilities */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                       Merchant Responsibilities
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Merchant Responsibilities
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">You agree to:</p>
                     <ul className="list-disc pl-[22px] text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
@@ -102,7 +105,7 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 6. Acceptable Use */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
                         Acceptable Use
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">You may not:</p>
@@ -115,11 +118,11 @@ export default function TermsConditions() {
                     </ul>
 
                     {/* 7. Intellectual Property */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Intellectual Property
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Intellectual Property
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        All rights, title, and interest in HubCart, including software, trademarks,
+                        All rights, title, and interest in Cart Plus, including software, trademarks,
                         logos, designs, and content, remain the exclusive property of Company Name.
                     </p>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
@@ -127,11 +130,11 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 8. Data Privacy */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
                         Data Privacy
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        Your use of HubCart is also governed by our Privacy Policy.
+                        Your use of Cart Plus is also governed by our Privacy Policy.
                     </p>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
                         We take reasonable measures to protect merchant data. However, no online
@@ -143,11 +146,11 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 9. Third-Party Services */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Third-Party Services
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Third-Party Services
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        HubCart operates within the Shopify ecosystem and may interact with
+                        Cart Plus operates within the Shopify ecosystem and may interact with
                         third-party services. We are not responsible for:
                     </p>
                     <ul className="list-disc pl-[22px] text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
@@ -158,7 +161,7 @@ export default function TermsConditions() {
                     </ul>
 
                     {/* 10. Service Availability */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
                         Service Availability
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
@@ -173,8 +176,8 @@ export default function TermsConditions() {
                     </ul>
 
                     {/* 11. Disclaimer of Warranties */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Disclaimer of Warranties
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Disclaimer of Warranties
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
                         The service is provided "as is" and "as available." To the maximum extent
@@ -192,11 +195,11 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 12. Limitation of Liability */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Limitation of Liability
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Limitation of Liability
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        To the fullest extent permitted by law, HubCart and its owners, employees,
+                        To the fullest extent permitted by law, Cart Plus and its owners, employees,
                         affiliates, and partners shall not be liable for:
                     </p>
                     <ul className="list-disc pl-[22px] text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
@@ -212,8 +215,8 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 13. Indemnification */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Indemnification
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Indemnification
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
                         You agree to indemnify and hold harmless Company Name, its officers,
@@ -227,11 +230,11 @@ export default function TermsConditions() {
                     </ul>
 
                     {/* 14. Termination */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
                         Termination
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
-                        We may suspend or terminate your access to HubCart at any time if:
+                        We may suspend or terminate your access to Cart Plus at any time if:
                     </p>
                     <ul className="list-disc pl-[22px] text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
                         <li>You violate these Terms.</li>
@@ -243,8 +246,8 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 15. Changes to Terms */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Changes to Terms
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Changes to Terms
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
                         We may update these Terms periodically. Updated versions will be posted within
@@ -253,7 +256,7 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 16. Governing Law */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
                         Governing Law
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
@@ -270,7 +273,7 @@ export default function TermsConditions() {
                         resolve the dispute informally by contacting the Company.
                     </p>
 
-                    <h3 className="font-semibold text-[20px] leading-[1.4] mb-[12px] mt-[24px]">
+                    <h3 className="font-semibold text-[20px] leading-[1.4] mb-[12px] mt-[20px]">
                         For European Union (EU) Users
                     </h3>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
@@ -279,14 +282,14 @@ export default function TermsConditions() {
                     </p>
 
                     {/* 17. Contact Information */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
                         Contact Information
                     </h2>
                     <p className="text-[16px] leading-[26px] mb-[16px]">
                         If you have any questions regarding these Terms, please contact us:
                     </p>
                     <ul className="list-none text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
-                        <li>HubCart Support</li>
+                        <li>Cart Plus Support</li>
                         <li>Company:</li>
                         <li>Email:</li>
                         <li>Website:</li>
@@ -294,17 +297,23 @@ export default function TermsConditions() {
                     </ul>
 
                     {/* 18. Entire Agreement */}
-                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[40px]">
-                         Entire Agreement
+                    <h2 className="font-semibold text-[35px] max-[540px]:text-[26px] leading-[1.3] mb-[20px] mt-[20px]">
+                        Entire Agreement
                     </h2>
                     <p className="text-[16px] leading-[26px]">
                         These Terms constitute the entire agreement between you and [Your Company Name]
-                        regarding the use of HubCart and supersede any prior agreements or
+                        regarding the use of Cart Plus and supersede any prior agreements or
                         understandings.
                     </p>
 
                 </div>
             </Container>
+            <div className='absolute z-0 top-[30%] right-0 hidden xl:block'>
+                <img src="https://cartplus.io/cartplus-img/Subtract (6).svg" alt="" loading="lazy" decoding="async" />
+            </div>
+            <div className='absolute z-0 bottom-[0%] left-0 hidden xl:block'>
+                <img src="https://cartplus.io/cartplus-img/Subtract (7).svg" alt="" loading="lazy" decoding="async" />
+            </div>
         </section>
     )
 }
