@@ -108,7 +108,7 @@ export default function Pricing({ showGradient }) {
         <div>
           <div className='text-center max-[540px]:mb-[20px] mb-[40px]'>
             <h2 className='font-bold max-[540px]:text-[35px] text-[45px] lg:text-[50px] leading-[45px] lg:leading-[60px] max-[540px]:mb-[15px] mb-[20px]'>
-              Simple, Transparent pricing
+              Simple, Transparent Pricing
             </h2>
             <p className='max-[540px]:text-[16px] text-[18px] max-[540px]:leading-[22px] leading-[28px] mx-auto max-w-[950px]'>
               Choose the plan that best fits your store and grow with confidence.
