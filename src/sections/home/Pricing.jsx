@@ -59,7 +59,7 @@ const plans = [
   {
     id: 4,
     name: 'Advanced',
-    badge: 'Best value',
+    badge: 'Most value',
     subtitle: 'For high-volume businesses',
     orders: '1000 ORDERS',
     showDivider: false,
@@ -151,7 +151,7 @@ export default function Pricing({ showGradient }) {
                   {/* Badge */}
                   {plan.badge && (
                     <span
-                      className={`absolute -top-[14px] text-[14px] font-semibold px-[16px] py-[4px] rounded-full whitespace-nowrap transition-colors duration-300
+                      className={`absolute -top-[14px] text-[14px] leading-[20px] font-semibold px-[16px] py-[4px] rounded-full whitespace-nowrap transition-colors duration-300
                         ${isActive ? 'bg-[#9500FF] text-white' : (badgeIdleClass[plan.id] || 'bg-[#1D1E20] text-white')}`}
                     >
                       {plan.badge}
@@ -185,7 +185,13 @@ export default function Pricing({ showGradient }) {
                       {plan.features.map((feature, index) => (
                         <li key={index} className='flex items-center gap-[10px] text-[12px]'>
                           <img
-                            src={isActive ? 'https://cartplus.io/cartplus-img/Vector (3).svg' : 'https://cartplus.io/cartplus-img/Vector (4).svg'}
+                            src={
+                              isActive
+                                ? 'https://cartplus.io/cartplus-img/Frame 2121452922 (2).svg'
+                                : plan.id === 1
+                                  ? 'https://cartplus.io/cartplus-img/Vector (4).svg'
+                                  : 'https://cartplus.io/cartplus-img/Vector (7).svg'
+                            }
                             alt='check'
                             loading='lazy'
                             decoding='async'
