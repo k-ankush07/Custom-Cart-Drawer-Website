@@ -119,15 +119,15 @@ export default function ContactForm() {
                 {['firstName', 'lastName'].map((field) => (
                   <div key={field} className="relative rounded-[10px]" style={{
                     padding: '1px',
-                    background: 'linear-gradient(268.89deg, rgba(149,0,255,0.2) 0.28%, rgba(255,255,255,0.2) 99.72%)',
+                    background: 'linear-gradient(53.87deg, rgba(255, 255, 255, 0.2) -14.16%, rgba(149, 0, 255, 0.2) 105.89%)',
                   }}>
                     <input
                       type="text"
                       placeholder={field === 'firstName' ? 'First Name' : 'Last Name'}
                       value={form[field]}
                       onChange={set(field)}
-                      className="w-full rounded-[10px] py-2 px-4 sm:py-3 text-[16px] text-white outline-none transition focus:bg-[#f0e4ff]"
-                      style={{ background: '#F9F1FF', color: '#000' }}
+                      className="w-full rounded-[10px]  py-2 px-4 sm:py-3 text-[16px] text-[#B077DA] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA]"
+                      style={{ background: '#F9F1FF' }}
                     />
                   </div>
                 ))}
@@ -143,8 +143,8 @@ export default function ContactForm() {
                   placeholder="Phone Number"
                   value={form.phone}
                   onChange={set('phone')}
-                  className="w-full rounded-[10px] py-2 px-4 sm:py-3 text-[16px] outline-none transition focus:bg-[#f0e4ff]"
-                  style={{ background: '#F9F1FF', color: '#000' }}
+                  className="w-full rounded-[10px]  py-2 px-4 sm:py-3 text-[16px] text-[#B077DA] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA]"
+                  style={{ background: '#F9F1FF' }}
                 />
               </div>
 
@@ -160,12 +160,12 @@ export default function ContactForm() {
                   placeholder="Address"
                   value={form.address}
                   onChange={set('address')}
-                  className="resize-none w-full rounded-[10px] py-2 px-4 sm:py-3 text-[16px] outline-none transition focus:bg-[#f0e4ff] h-[120px] sm:h-[196px]"
-                  style={{ background: '#F9F1FF', color: '#000', display: 'block', lineHeight: '1.5' }}
+                  className="resize-none w-full rounded-[10px] text-[#B077DA] py-2 px-4 sm:py-3 text-[16px] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA] h-[120px] sm:h-[196px]"
+                  style={{ background: '#F9F1FF', display: 'block', lineHeight: '1.5' }}
                 />
               </div>
 
-              <Button className='text-center justify-center' type="submit">Send</Button>
+              <Button icon="https://cartplus.io/cartplus-img/Vector%20(6).png" className='text-center justify-center mx-auto' type="submit">Submit Now</Button>
             </form>
           </div>
         </div>
