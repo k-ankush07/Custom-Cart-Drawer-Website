@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Container from '../../components/Container'
 import Button from '../../components/Button'
 
@@ -30,16 +30,130 @@ const CONTACT_INFO = [
   },
 ]
 
+// ── API config ───────────────────────────────────────────────────────────
+const API_ENDPOINT = import.meta.env.VITE_CONTACT_API_URL
+
 export default function ContactForm() {
   const [form, setForm] = useState({
-    firstName: '', lastName: '', phone: '', address: '',
+    firstName: '', lastName: '', email: '', phone: '', address: '',
   })
+  const [status, setStatus] = useState('idle') // idle | submitting | success | error
+  const [errorMsg, setErrorMsg] = useState('')
+  const [fieldErrors, setFieldErrors] = useState({})
 
-  const set = (field) => (e) => setForm((prev) => ({ ...prev, [field]: e.target.value }))
+  const set = (field) => (e) => {
+    let value = e.target.value
+    if (field === 'firstName' || field === 'lastName') {
+      value = value.replace(/[^A-Za-z]/g, '')
+    } else if (field === 'phone') {
+      value = value.replace(/[^0-9]/g, '')
+    }
+    setForm((prev) => ({ ...prev, [field]: value }))
+    // clear that field's error as soon as the user edits it
+    setFieldErrors((prev) => (prev[field] ? { ...prev, [field]: '' } : prev))
+  }
 
-  const handleSend = (e) => {
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  const PHONE_REGEX = /^[0-9]{7,15}$/
+  const NAME_REGEX = /^[A-Za-z]+$/
+  const NAME_MIN = 2
+  const NAME_MAX = 30
+  const PHONE_MIN = 7
+  const PHONE_MAX = 15
+
+  const validate = (values) => {
+    const errors = {}
+    const first = values.firstName.trim()
+    const last = values.lastName.trim()
+    const email = values.email.trim()
+    const phone = values.phone.trim()
+
+    // First name — required
+    if (!first) {
+      errors.firstName = 'First name is required.'
+    } else if (!NAME_REGEX.test(first)) {
+      errors.firstName = 'First name must contain letters only.'
+    } else if (first.length < NAME_MIN || first.length > NAME_MAX) {
+      errors.firstName = `First name must be ${NAME_MIN}-${NAME_MAX} characters.`
+    }
+
+    // Last name — optional, but validated if filled in
+    if (last) {
+      if (!NAME_REGEX.test(last)) {
+        errors.lastName = 'Last name must contain letters only.'
+      } else if (last.length < NAME_MIN || last.length > NAME_MAX) {
+        errors.lastName = `Last name must be ${NAME_MIN}-${NAME_MAX} characters.`
+      }
+    }
+
+    // Email — required
+    if (!email) {
+      errors.email = 'Email is required.'
+    } else if (!EMAIL_REGEX.test(email)) {
+      errors.email = 'Enter a valid email address.'
+    }
+
+    // Phone — optional, but validated if filled in
+    if (phone) {
+      if (!PHONE_REGEX.test(phone)) {
+        errors.phone = 'Phone number must contain digits only.'
+      } else if (phone.length < PHONE_MIN || phone.length > PHONE_MAX) {
+        errors.phone = `Phone number must be ${PHONE_MIN}-${PHONE_MAX} digits.`
+      }
+    }
+
+    return errors
+  }
+
+  // auto-hide success/error messages after 4s
+  useEffect(() => {
+    if (status !== 'success' && status !== 'error') return
+    const timer = setTimeout(() => {
+      setStatus('idle')
+      setErrorMsg('')
+    }, 4000)
+    return () => clearTimeout(timer)
+  }, [status])
+
+  const handleSend = async (e) => {
     e.preventDefault()
-    console.log('Contact form submitted:', form)
+
+    const errors = validate(form)
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors)
+      setStatus('error')
+      setErrorMsg('Please fix the highlighted fields.')
+      return
+    }
+    setFieldErrors({})
+
+    setStatus('submitting')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch(API_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // NOTE: shipped to the browser bundle — visible to anyone via dev tools.
+          // Not a real secret in production; see comment above API_ENDPOINT.
+          'X-API-Key': import.meta.env.VITE_API_SECRET_KEY,
+        },
+        body: JSON.stringify(form),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.message || `Request failed with status ${res.status}`)
+      }
+
+      setStatus('success')
+      setForm({ firstName: '', lastName: '', email: '', phone: '', address: '' })
+      setFieldErrors({})
+    } catch (err) {
+      setStatus('error')
+      setErrorMsg(err.message || 'Something went wrong. Please try again.')
+    }
   }
 
   return (
@@ -117,35 +231,94 @@ export default function ContactForm() {
               {/* First / Last name row */}
               <div className="grid max-[430px]:grid-cols-1 grid-cols-2 gap-4">
                 {['firstName', 'lastName'].map((field) => (
-                  <div key={field} className="relative rounded-[10px]" style={{
-                    padding: '1px',
-                    background: 'linear-gradient(53.87deg, rgba(255, 255, 255, 0.2) -14.16%, rgba(149, 0, 255, 0.2) 105.89%)',
-                  }}>
-                    <input
-                      type="text"
-                      placeholder={field === 'firstName' ? 'First Name' : 'Last Name'}
-                      value={form[field]}
-                      onChange={set(field)}
-                      className="w-full rounded-[10px]  py-2 px-4 sm:py-3 text-[16px] text-[#B077DA] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA]"
-                      style={{ background: '#F9F1FF' }}
-                    />
+                  <div key={field}>
+                    <div
+                      className="relative rounded-[10px]"
+                      style={{
+                        padding: '1px',
+                        background: fieldErrors[field]
+                          ? '#dc2626'
+                          : 'linear-gradient(53.87deg, rgba(255, 255, 255, 0.2) -14.16%, rgba(149, 0, 255, 0.2) 105.89%)',
+                      }}
+                    >
+                      <input
+                        type="text"
+                        placeholder={field === 'firstName' ? 'First Name *' : 'Last Name'}
+                        value={form[field]}
+                        onChange={set(field)}
+                        disabled={status === 'submitting'}
+                        required={field === 'firstName'}
+                        minLength={2}
+                        maxLength={30}
+                        aria-invalid={Boolean(fieldErrors[field])}
+                        className="w-full rounded-[10px]  py-2 px-4 sm:py-3 text-[16px] text-[#B077DA] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA] disabled:opacity-60"
+                        style={{ background: '#F9F1FF' }}
+                      />
+                    </div>
+                    {fieldErrors[field] && (
+                      <p className="mt-1 text-[13px] text-red-600">{fieldErrors[field]}</p>
+                    )}
                   </div>
                 ))}
               </div>
 
-              {/* Phone */}
-              <div className="relative rounded-[10px]" style={{
-                padding: '1px',
-                background: 'linear-gradient(268.89deg, rgba(149,0,255,0.2) 0.28%, rgba(255,255,255,0.2) 99.72%)',
-              }}>
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  value={form.phone}
-                  onChange={set('phone')}
-                  className="w-full rounded-[10px]  py-2 px-4 sm:py-3 text-[16px] text-[#B077DA] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA]"
-                  style={{ background: '#F9F1FF' }}
-                />
+              {/* Email / Phone row */}
+              <div className="grid max-[430px]:grid-cols-1 grid-cols-2 gap-4">
+                {/* Email */}
+                <div>
+                  <div
+                    className="relative rounded-[10px]"
+                    style={{
+                      padding: '1px',
+                      background: fieldErrors.email
+                        ? '#dc2626'
+                        : 'linear-gradient(268.89deg, rgba(149,0,255,0.2) 0.28%, rgba(255,255,255,0.2) 99.72%)',
+                    }}
+                  >
+                    <input
+                      type="email"
+                      placeholder="Email Address *"
+                      value={form.email}
+                      onChange={set('email')}
+                      disabled={status === 'submitting'}
+                      required
+                      aria-invalid={Boolean(fieldErrors.email)}
+                      className="w-full rounded-[10px]  py-2 px-4 sm:py-3 text-[16px] text-[#B077DA] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA] disabled:opacity-60"
+                      style={{ background: '#F9F1FF' }}
+                    />
+                  </div>
+                  {fieldErrors.email && (
+                    <p className="mt-1 text-[13px] text-red-600">{fieldErrors.email}</p>
+                  )}
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <div
+                    className="relative rounded-[10px]"
+                    style={{
+                      padding: '1px',
+                      background: fieldErrors.phone
+                        ? '#dc2626'
+                        : 'linear-gradient(268.89deg, rgba(149,0,255,0.2) 0.28%, rgba(255,255,255,0.2) 99.72%)',
+                    }}
+                  >
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      value={form.phone}
+                      onChange={set('phone')}
+                      disabled={status === 'submitting'}
+                      maxLength={15}
+                      aria-invalid={Boolean(fieldErrors.phone)}
+                      className="w-full rounded-[10px]  py-2 px-4 sm:py-3 text-[16px] text-[#B077DA] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA] disabled:opacity-60"
+                      style={{ background: '#F9F1FF' }}
+                    />
+                  </div>
+                  {fieldErrors.phone && (
+                    <p className="mt-1 text-[13px] text-red-600">{fieldErrors.phone}</p>
+                  )}
+                </div>
               </div>
 
               {/* Address */}
@@ -160,12 +333,56 @@ export default function ContactForm() {
                   placeholder="Address"
                   value={form.address}
                   onChange={set('address')}
-                  className="resize-none w-full rounded-[10px] text-[#B077DA] py-2 px-4 sm:py-3 text-[16px] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA] h-[120px] sm:h-[196px]"
+                  disabled={status === 'submitting'}
+                  className="resize-none w-full rounded-[10px] text-[#B077DA] py-2 px-4 sm:py-3 text-[16px] outline-none transition focus:bg-[#f0e4ff] placeholder-[#B077DA] h-[120px] sm:h-[196px] disabled:opacity-60"
                   style={{ background: '#F9F1FF', display: 'block', lineHeight: '1.5' }}
                 />
               </div>
 
-              <Button icon="https://cartplus.io/cartplus-img/Vector%20(6).png" className='text-center justify-center mx-auto' type="submit">Submit Now</Button>
+              {/* Status messages */}
+              {status === 'error' && (
+                <p className="text-[14px] text-red-600">{errorMsg}</p>
+              )}
+              {status === 'success' && (
+                <p className="text-[14px] text-green-600">Thanks! We've received your message and will be in touch soon.</p>
+              )}
+
+              <Button
+                icon={
+                  status === 'submitting'
+                    ? undefined
+                    : "https://cartplus.io/cartplus-img/Vector%20(6).png"
+                }
+                className='text-center justify-center mx-auto disabled:opacity-60'
+                type="submit"
+                disabled={status === 'submitting'}
+              >
+                {status === 'submitting' ? (
+                  <span className="flex items-center gap-2">
+                    Sending...
+                     <svg
+                      className="animate-spin h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12" cy="12" r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      />
+                    </svg>
+                  </span>
+                ) : (
+                  'Submit Now'
+                )}
+              </Button>
             </form>
           </div>
         </div>
