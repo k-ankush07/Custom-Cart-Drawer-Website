@@ -246,11 +246,11 @@ export default function PrivacyPolicy() {
                         please contact us:
                     </p>
                     <ul className="list-none text-[16px] leading-[26px] space-y-[8px]">
-                        <li>Cart Plus</li>
-                        <li>Company Name:</li>
-                        <li>Email:</li>
-                        <li>Website:</li>
-                        <li>Address:</li>
+                        {/* <li>Cart Plus</li> */}
+                        {/* <li>Company Name: </li> */}
+                        <li>Email: support@cartplus.io</li>
+                        {/* <li>Website:</li>
+                        <li>Address:</li> */}
                     </ul>
 
                 </div>

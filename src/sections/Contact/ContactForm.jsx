@@ -21,8 +21,8 @@ const SOCIAL = [
 ]
 
 const CONTACT_INFO = [
-  { icon: 'phone', label: 'Phone Number', value: '123-456-789' },
-  { icon: 'mail', label: 'Email Address', value: 'hello@hubcart.io' },
+  { icon: 'phone', label: 'Phone Number', value: '+91-86792 27771' },
+  { icon: 'mail', label: 'Email Address', value: 'support@cartplus.io' },
   {
     icon: 'location',
     label: 'Our Location',

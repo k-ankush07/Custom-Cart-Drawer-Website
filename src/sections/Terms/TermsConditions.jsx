@@ -289,11 +289,11 @@ export default function TermsConditions() {
                         If you have any questions regarding these Terms, please contact us:
                     </p>
                     <ul className="list-none text-[16px] leading-[26px] mb-[16px] space-y-[8px]">
-                        <li>Cart Plus Support</li>
-                        <li>Company:</li>
-                        <li>Email:</li>
-                        <li>Website:</li>
-                        <li>Address:</li>
+                        {/* <li>Cart Plus Support</li>
+                        <li>Company:</li> */}
+                        <li>Email: support@cartplus.io</li>
+                        {/* <li>Website:</li>
+                        <li>Address:</li> */}
                     </ul>
 
                     {/* 18. Entire Agreement */}
@@ -301,9 +301,7 @@ export default function TermsConditions() {
                         Entire Agreement
                     </h2>
                     <p className="text-[16px] leading-[26px]">
-                        These Terms constitute the entire agreement between you and [Your Company Name]
-                        regarding the use of Cart Plus and supersede any prior agreements or
-                        understandings.
+                        These Terms constitute the entire agreement regarding your use of Cart Plus and supersede all prior agreements, understandings, or communications.
                     </p>
 
                 </div>
