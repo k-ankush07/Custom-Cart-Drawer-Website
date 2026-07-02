@@ -37,7 +37,7 @@ export default function ContactForm() {
   const [form, setForm] = useState({
     firstName: '', lastName: '', email: '', phone: '', address: '',
   })
-  const [status, setStatus] = useState('idle') // idle | submitting | success | error
+  const [status, setStatus] = useState('idle') 
   const [errorMsg, setErrorMsg] = useState('')
   const [fieldErrors, setFieldErrors] = useState({})
 
